@@ -6,127 +6,34 @@
 <title>茉莉🌸 技能装备树</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0f1419;
-    color: #e8e8e8;
-    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-    padding: 30px 20px;
-    min-height: 100vh;
-  }
-  h1 {
-    text-align: center;
-    font-size: 28px;
-    color: #f7c948;
-    margin-bottom: 8px;
-  }
-  .subtitle {
-    text-align: center;
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 40px;
-  }
-  .tree {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
-  .category {
-    background: #1a2332;
-    border-radius: 16px;
-    padding: 20px 24px;
-    border: 1px solid #2a3a50;
-  }
-  .cat-header {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #2a3a50;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  body { background: #0f1419; color: #e8e8e8; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; padding: 30px 20px; min-height: 100vh; }
+  h1 { text-align: center; font-size: 28px; color: #f7c948; margin-bottom: 8px; }
+  .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 40px; }
+  .tree { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  .category { background: #1a2332; border-radius: 16px; padding: 20px 24px; border: 1px solid #2a3a50; }
+  .cat-header { font-size: 16px; font-weight: bold; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #2a3a50; display: flex; align-items: center; gap: 10px; }
   .cat-icon { font-size: 22px; }
   .cat-name { color: #f7c948; }
-  .cat-count { 
-    margin-left: auto; 
-    background: #2a3a50; 
-    color: #888; 
-    font-size: 12px; 
-    padding: 2px 8px; 
-    border-radius: 10px;
-  }
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .skill {
-    background: #0f1923;
-    border: 1px solid #2a3a50;
-    border-radius: 10px;
-    padding: 10px 14px;
-    min-width: 160px;
-    flex: 1;
-    transition: all 0.2s;
-  }
-  .skill:hover {
-    border-color: #f7c948;
-    transform: translateY(-2px);
-  }
-  .skill-name {
-    font-size: 14px;
-    color: #7dd3fc;
-    font-weight: bold;
-    margin-bottom: 4px;
-  }
-  .skill-desc {
-    font-size: 12px;
-    color: #888;
-    line-height: 1.4;
-  }
-  .skill-status {
-    display: inline-block;
-    margin-top: 6px;
-    font-size: 11px;
-    padding: 1px 7px;
-    border-radius: 6px;
-  }
+  .cat-count { margin-left: auto; background: #2a3a50; color: #888; font-size: 12px; padding: 2px 8px; border-radius: 10px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill { background: #0f1923; border: 1px solid #2a3a50; border-radius: 10px; padding: 10px 14px; min-width: 160px; flex: 1; transition: all 0.2s; }
+  .skill:hover { border-color: #f7c948; transform: translateY(-2px); }
+  .skill-name { font-size: 14px; color: #7dd3fc; font-weight: bold; margin-bottom: 4px; }
+  .skill-desc { font-size: 12px; color: #888; line-height: 1.4; }
+  .skill-status { display: inline-block; margin-top: 6px; font-size: 11px; padding: 1px 7px; border-radius: 6px; }
   .status-ok { background: #1a4d2e; color: #4ade80; }
   .status-warn { background: #4d3d1a; color: #facc15; }
   .status-error { background: #4d1a1a; color: #f87171; }
-  .legend {
-    max-width: 1100px;
-    margin: 30px auto 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    color: #888;
-  }
-  .legend-dot {
-    width: 10px; height: 10px; border-radius: 50%;
-  }
-  .total {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 18px;
-    color: #f7c948;
-  }
+  .legend { max-width: 1100px; margin: 30px auto 0; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #888; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .total { text-align: center; margin-top: 30px; font-size: 18px; color: #f7c948; }
 </style>
 </head>
 <body>
 
 <h1>🌸 茉莉技能装备树</h1>
-<div class="subtitle">2026-03-24 · OpenClaw 30 Skills</div>
+<div class="subtitle">2026-03-25 · OpenClaw · 每周进修系统已启动（每天03:00自动运行）</div>
 
 <div class="tree">
 
@@ -135,7 +42,7 @@
     <div class="cat-header">
       <span class="cat-icon">🧠</span>
       <span class="cat-name">核心能力 · 记忆与学习</span>
-      <span class="cat-count">4个</span>
+      <span class="cat-count">5个</span>
     </div>
     <div class="skills">
       <div class="skill">
@@ -157,6 +64,11 @@
         <div class="skill-name">ontology</div>
         <div class="skill-desc">知识图谱，结构化知识管理</div>
         <span class="skill-status status-ok">✅ 完好</span>
+      </div>
+      <div class="skill">
+        <div class="skill-name">self-improvement</div>
+        <div class="skill-desc">🌙 每周进修系统（每日03:00自动运行）</div>
+        <span class="skill-status status-ok">✅ 新增</span>
       </div>
     </div>
   </div>
@@ -186,7 +98,7 @@
       </div>
       <div class="skill">
         <div class="skill-name">tavily</div>
-        <div class="skill-desc">AI优化深度搜索</div>
+        <div class="skill-desc">AI优化深度搜索（Tavily API）</div>
         <span class="skill-status status-ok">✅ API已配置</span>
       </div>
       <div class="skill">
@@ -274,7 +186,7 @@
     <div class="cat-header">
       <span class="cat-icon">💼</span>
       <span class="cat-name">办公协作 · 文档与代码</span>
-      <span class="cat-count">6个</span>
+      <span class="cat-count">7个</span>
     </div>
     <div class="skills">
       <div class="skill">
@@ -285,7 +197,7 @@
       <div class="skill">
         <div class="skill-name">feishu-doc-editor</div>
         <div class="skill-desc">飞书文档编辑创建</div>
-        <span class="skill-status status-warn">⚠️ 缺API</span>
+        <span class="skill-status status-ok">✅ 完好</span>
       </div>
       <div class="skill">
         <div class="skill-name">feishu-wiki</div>
@@ -305,6 +217,11 @@
       <div class="skill">
         <div class="skill-name">humanizer</div>
         <div class="skill-desc">去除AI写作痕迹，让文字更自然</div>
+        <span class="skill-status status-ok">✅ 完好</span>
+      </div>
+      <div class="skill">
+        <div class="skill-name">office-document-specialist-suite</div>
+        <div class="skill-desc">办公软件专家套件（Word/Excel/PPT）</div>
         <span class="skill-status status-ok">✅ 完好</span>
       </div>
     </div>
@@ -351,7 +268,7 @@
     <div class="cat-header">
       <span class="cat-icon">🛡️</span>
       <span class="cat-name">安全与元技能</span>
-      <span class="cat-count">4个</span>
+      <span class="cat-count">2个</span>
     </div>
     <div class="skills">
       <div class="skill">
@@ -364,15 +281,26 @@
         <div class="skill-desc">技能源优先级策略</div>
         <span class="skill-status status-ok">✅ 完好</span>
       </div>
+    </div>
+  </div>
+
+  <!-- 浏览器自动化 -->
+  <div class="category">
+    <div class="cat-header">
+      <span class="cat-icon">🌐</span>
+      <span class="cat-name">浏览器自动化</span>
+      <span class="cat-count">2个</span>
+    </div>
+    <div class="skills">
       <div class="skill">
         <div class="skill-name">autoclaw-browser</div>
         <div class="skill-desc">OpenClaw内置浏览器控制</div>
-        <span class="skill-status status-error">🔴 需Chrome扩展</span>
+        <span class="skill-status status-ok">✅ 完好</span>
       </div>
       <div class="skill">
         <div class="skill-name">autoglm-browser-agent</div>
-        <div class="skill-desc">智能浏览器自动化</div>
-        <span class="skill-status status-error">🔴 需配置</span>
+        <div class="skill-desc">智能浏览器自动化（必用）</div>
+        <span class="skill-status status-ok">✅ 完好</span>
       </div>
     </div>
   </div>
@@ -385,7 +313,7 @@
   <div class="legend-item"><div class="legend-dot" style="background:#4d1a1a"></div>🔴 需手动修复</div>
 </div>
 
-<div class="total">🎉 共计 <strong>30</strong> 个技能 · 完好 <strong>23</strong> 个 · 待修复 <strong>7</strong> 个</div>
+<div class="total">🎉 共计 <strong>32</strong> 个技能 · 完好 <strong>29</strong> 个 · 待配置 <strong>3</strong> 个</div>
 
 </body>
 </html>
