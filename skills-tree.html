@@ -5,315 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>茉莉🌸 技能装备树</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0f1419; color: #e8e8e8; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; padding: 30px 20px; min-height: 100vh; }
-  h1 { text-align: center; font-size: 28px; color: #f7c948; margin-bottom: 8px; }
-  .subtitle { text-align: center; color: #888; font-size: 14px; margin-bottom: 40px; }
-  .tree { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
-  .category { background: #1a2332; border-radius: 16px; padding: 20px 24px; border: 1px solid #2a3a50; }
-  .cat-header { font-size: 16px; font-weight: bold; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #2a3a50; display: flex; align-items: center; gap: 10px; }
-  .cat-icon { font-size: 22px; }
-  .cat-name { color: #f7c948; }
-  .cat-count { margin-left: auto; background: #2a3a50; color: #888; font-size: 12px; padding: 2px 8px; border-radius: 10px; }
-  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
-  .skill { background: #0f1923; border: 1px solid #2a3a50; border-radius: 10px; padding: 10px 14px; min-width: 160px; flex: 1; transition: all 0.2s; }
-  .skill:hover { border-color: #f7c948; transform: translateY(-2px); }
-  .skill-name { font-size: 14px; color: #7dd3fc; font-weight: bold; margin-bottom: 4px; }
-  .skill-desc { font-size: 12px; color: #888; line-height: 1.4; }
-  .skill-status { display: inline-block; margin-top: 6px; font-size: 11px; padding: 1px 7px; border-radius: 6px; }
-  .status-ok { background: #1a4d2e; color: #4ade80; }
-  .status-warn { background: #4d3d1a; color: #facc15; }
-  .status-error { background: #4d1a1a; color: #f87171; }
-  .legend { max-width: 1100px; margin: 30px auto 0; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #888; }
-  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .total { text-align: center; margin-top: 30px; font-size: 18px; color: #f7c948; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f1419;color:#e8e8e8;font-family:"PingFang SC","Microsoft YaHei",sans-serif;padding:30px 20px}
+h1{text-align:center;font-size:28px;color:#f7c948;margin-bottom:8px}
+.subtitle{text-align:center;color:#888;font-size:14px;margin-bottom:40px}
+.tree{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.category{background:#1a2332;border-radius:16px;padding:20px 24px;border:1px solid #2a3a50}
+.cat-header{font-size:16px;font-weight:bold;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #2a3a50;display:flex;align-items:center;gap:10px}
+.cat-icon{font-size:22px}
+.cat-name{color:#f7c948}
+.cat-count{margin-left:auto;background:#2a3a50;color:#888;font-size:12px;padding:2px 8px;border-radius:10px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:#0f1923;border:1px solid #2a3a50;border-radius:10px;padding:10px 14px;min-width:160px;flex:1;transition:all 0.2s}
+.skill:hover{border-color:#f7c948;transform:translateY(-2px)}
+.skill-name{font-size:14px;color:#7dd3fc;font-weight:bold;margin-bottom:4px}
+.skill-desc{font-size:12px;color:#888;line-height:1.4}
+.skill-status{display:inline-block;margin-top:6px;font-size:11px;padding:1px 7px;border-radius:6px}
+.status-ok{background:#1a4d2e;color:#4ade80}
+.status-warn{background:#4d3d1a;color:#facc15}
+.legend{max-width:1100px;margin:30px auto 0;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:13px;color:#888}
+.legend-dot{width:10px;height:10px;border-radius:50%}
+.total{text-align:center;margin-top:30px;font-size:18px;color:#f7c948}
 </style>
 </head>
 <body>
-
 <h1>🌸 茉莉技能装备树</h1>
 <div class="subtitle">2026-03-25 · OpenClaw · 每周进修系统已启动（每天03:00自动运行）</div>
-
 <div class="tree">
 
-  <!-- 核心能力 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🧠</span>
-      <span class="cat-name">核心能力 · 记忆与学习</span>
-      <span class="cat-count">5个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">self-improving-agent</div>
-        <div class="skill-desc">自我反馈学习，犯错后自动记录经验</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">memory-setup</div>
-        <div class="skill-desc">持久记忆配置，让AI记住你的习惯</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">proactive-agent</div>
-        <div class="skill-desc">主动Agent，预判需求定时巡检</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">ontology</div>
-        <div class="skill-desc">知识图谱，结构化知识管理</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">self-improvement</div>
-        <div class="skill-desc">🌙 每周进修系统（每日03:00自动运行）</div>
-        <span class="skill-status status-ok">✅ 新增</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">🧠</span><span class="cat-name">核心能力 · 记忆与学习</span><span class="cat-count">5个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">self-improving-agent</div><div class="skill-desc">自我反馈学习，犯错后自动记录经验</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">memory-setup</div><div class="skill-desc">持久记忆配置，让AI记住你的习惯</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">proactive-agent</div><div class="skill-desc">主动Agent，预判需求定时巡检</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">ontology</div><div class="skill-desc">知识图谱，结构化知识管理</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">self-improvement</div><div class="skill-desc">🌙 每周进修系统（每日03:00自动运行）</div><span class="skill-status status-ok">✅ 新增</span></div>
+</div></div>
 
-  <!-- 信息获取 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🔍</span>
-      <span class="cat-name">信息获取 · 搜索与摘要</span>
-      <span class="cat-count">5个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">summarize</div>
-        <div class="skill-desc">网页/PDF/视频一键总结摘要</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">web-content-fetcher</div>
-        <div class="skill-desc">任意网页抓取，含微信公众号</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">youtube-watcher</div>
-        <div class="skill-desc">YouTube字幕提取与总结</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">tavily</div>
-        <div class="skill-desc">AI优化深度搜索（Tavily API）</div>
-        <span class="skill-status status-ok">✅ API已配置</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">find-skills</div>
-        <div class="skill-desc">智能发现和推荐新技能</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">🔍</span><span class="cat-name">信息获取 · 搜索与摘要</span><span class="cat-count">5个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">summarize</div><div class="skill-desc">网页/PDF/视频一键总结摘要</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">web-content-fetcher</div><div class="skill-desc">任意网页抓取，含微信公众号</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">youtube-watcher</div><div class="skill-desc">YouTube字幕提取与总结</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">tavily</div><div class="skill-desc">AI优化深度搜索（Tavily API）</div><span class="skill-status status-ok">✅ API已配置</span></div>
+<div class="skill"><div class="skill-name">find-skills</div><div class="skill-desc">智能发现和推荐新技能</div><span class="skill-status status-ok">✅ 完好</span></div>
+</div></div>
 
-  <!-- 数据处理 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">📊</span>
-      <span class="cat-name">数据处理 · 分析与可视化</span>
-      <span class="cat-count">4个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">duckdb-en</div>
-        <div class="skill-desc">SQL数据库查询分析</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">python-dataviz</div>
-        <div class="skill-desc">Python图表生成（matplotlib/seaborn/plotly）</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">stock-analysis</div>
-        <div class="skill-desc">股票/加密货币分析，8维度评分</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">stock-market-pro</div>
-        <div class="skill-desc">股市技术分析，RSI/MACD/布林带图表</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">📊</span><span class="cat-name">数据处理 · 分析与可视化</span><span class="cat-count">4个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">duckdb-en</div><div class="skill-desc">SQL数据库查询分析</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">python-dataviz</div><div class="skill-desc">Python图表生成（matplotlib/seaborn/plotly）</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">stock-analysis</div><div class="skill-desc">股票/加密货币分析，8维度评分</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">stock-market-pro</div><div class="skill-desc">股市技术分析，RSI/MACD/布林带图表</div><span class="skill-status status-ok">✅ 完好</span></div>
+</div></div>
 
-  <!-- 文档与媒体 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">📄</span>
-      <span class="cat-name">文档与媒体处理</span>
-      <span class="cat-count">6个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">nano-pdf</div>
-        <div class="skill-desc">用说话的方式编辑PDF文件</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">markdown-converter</div>
-        <div class="skill-desc">万能格式转Markdown</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">openai-whisper</div>
-        <div class="skill-desc">本地语音转文字（无需上传）</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">openai-whisper-api</div>
-        <div class="skill-desc">API语音转文字（需API Key）</div>
-        <span class="skill-status status-warn">⚠️ 缺API Key</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">video-frames</div>
-        <div class="skill-desc">视频关键帧提取</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">nano-banana-pro</div>
-        <div class="skill-desc">AI图片生成（Gemini 3 Pro）</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">📄</span><span class="cat-name">文档与媒体处理</span><span class="cat-count">5个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">nano-pdf</div><div class="skill-desc">用说话的方式编辑PDF文件</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">markdown-converter</div><div class="skill-desc">万能格式转Markdown</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">openai-whisper</div><div class="skill-desc">本地语音转文字（无需上传）</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">video-frames</div><div class="skill-desc">视频关键帧提取</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">nano-banana-pro</div><div class="skill-desc">AI图片生成（Gemini 3 Pro）</div><span class="skill-status status-ok">✅ 完好</span></div>
+</div></div>
 
-  <!-- 办公协作 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">💼</span>
-      <span class="cat-name">办公协作 · 文档与代码</span>
-      <span class="cat-count">7个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">feishu-doc</div>
-        <div class="skill-desc">飞书文档读写</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">feishu-doc-editor</div>
-        <div class="skill-desc">飞书文档编辑创建</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">feishu-wiki</div>
-        <div class="skill-desc">飞书知识库</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">feishu-drive</div>
-        <div class="skill-desc">飞书云盘</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">github</div>
-        <div class="skill-desc">GitHub项目管理（已登录hulizz14）</div>
-        <span class="skill-status status-ok">✅ 已登录</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">humanizer</div>
-        <div class="skill-desc">去除AI写作痕迹，让文字更自然</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">office-document-specialist-suite</div>
-        <div class="skill-desc">办公软件专家套件（Word/Excel/PPT）</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">💼</span><span class="cat-name">办公协作 · 文档与代码</span><span class="cat-count">7个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">feishu-doc</div><div class="skill-desc">飞书文档读写</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">feishu-doc-editor</div><div class="skill-desc">飞书文档编辑创建</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">feishu-wiki</div><div class="skill-desc">飞书知识库</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">feishu-drive</div><div class="skill-desc">飞书云盘</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">github</div><div class="skill-desc">GitHub项目管理（已登录hulizz14）</div><span class="skill-status status-ok">✅ 已登录</span></div>
+<div class="skill"><div class="skill-name">humanizer</div><div class="skill-desc">去除AI写作痕迹，让文字更自然</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">office-document-specialist-suite</div><div class="skill-desc">办公软件专家套件（Word/Excel/PPT）</div><span class="skill-status status-ok">✅ 完好</span></div>
+</div></div>
 
-  <!-- 系统与集成 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🔧</span>
-      <span class="cat-name">系统与集成</span>
-      <span class="cat-count">5个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">weather</div>
-        <div class="skill-desc">天气预报，开箱即用无需API</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">gog</div>
-        <div class="skill-desc">Google Workspace（Gmail/日历/文档）</div>
-        <span class="skill-status status-ok">✅ CLI已装</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">api-gateway</div>
-        <div class="skill-desc">100+第三方API连接器</div>
-        <span class="skill-status status-warn">⚠️ 缺MATON Key</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">notion</div>
-        <div class="skill-desc">Notion笔记管理</div>
-        <span class="skill-status status-warn">⚠️ 缺API Key</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">obsidian</div>
-        <div class="skill-desc">Obsidian本地知识库</div>
-        <span class="skill-status status-ok">✅ 已装</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">🔧</span><span class="cat-name">系统与集成</span><span class="cat-count">5个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">weather</div><div class="skill-desc">天气预报，开箱即用无需API</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">gog</div><div class="skill-desc">Google Workspace（Gmail/日历/文档）</div><span class="skill-status status-ok">✅ CLI已装</span></div>
+<div class="skill"><div class="skill-name">api-gateway</div><div class="skill-desc">100+第三方API连接器</div><span class="skill-status status-ok">✅ 已配置</span></div>
+<div class="skill"><div class="skill-name">notion</div><div class="skill-desc">Notion笔记管理</div><span class="skill-status status-warn">⚠️ 缺API Key</span></div>
+<div class="skill"><div class="skill-name">obsidian</div><div class="skill-desc">Obsidian本地知识库</div><span class="skill-status status-ok">✅ 已装</span></div>
+</div></div>
 
-  <!-- 安全与元技能 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🛡️</span>
-      <span class="cat-name">安全与元技能</span>
-      <span class="cat-count">2个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">skill-vetter</div>
-        <div class="skill-desc">Skill安全审查，安装前检查风险</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">skillhub-preference</div>
-        <div class="skill-desc">技能源优先级策略</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">🛡️</span><span class="cat-name">安全与元技能</span><span class="cat-count">2个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">skill-vetter</div><div class="skill-desc">Skill安全审查，安装前检查风险</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">skillhub-preference</div><div class="skill-desc">技能源优先级策略</div><span class="skill-status status-ok">✅ 完好</span></div>
+</div></div>
 
-  <!-- 浏览器自动化 -->
-  <div class="category">
-    <div class="cat-header">
-      <span class="cat-icon">🌐</span>
-      <span class="cat-name">浏览器自动化</span>
-      <span class="cat-count">2个</span>
-    </div>
-    <div class="skills">
-      <div class="skill">
-        <div class="skill-name">autoclaw-browser</div>
-        <div class="skill-desc">OpenClaw内置浏览器控制</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-      <div class="skill">
-        <div class="skill-name">autoglm-browser-agent</div>
-        <div class="skill-desc">智能浏览器自动化（必用）</div>
-        <span class="skill-status status-ok">✅ 完好</span>
-      </div>
-    </div>
-  </div>
+<div class="category"><div class="cat-header"><span class="cat-icon">🌐</span><span class="cat-name">浏览器自动化</span><span class="cat-count">2个</span></div><div class="skills">
+<div class="skill"><div class="skill-name">autoclaw-browser</div><div class="skill-desc">OpenClaw内置浏览器控制</div><span class="skill-status status-ok">✅ 完好</span></div>
+<div class="skill"><div class="skill-name">autoglm-browser-agent</div><div class="skill-desc">智能浏览器自动化（必用）</div><span class="skill-status status-ok">✅ 完好</span></div>
+</div></div>
 
 </div>
-
 <div class="legend">
-  <div class="legend-item"><div class="legend-dot" style="background:#1a4d2e"></div>✅ 完好可用</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#4d3d1a"></div>⚠️ 缺配置/API</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#4d1a1a"></div>🔴 需手动修复</div>
+<div class="legend-item"><div class="legend-dot" style="background:#1a4d2e"></div>✅ 完好可用</div>
+<div class="legend-item"><div class="legend-dot" style="background:#4d3d1a"></div>⚠️ 缺配置/API</div>
 </div>
-
-<div class="total">🎉 共计 <strong>32</strong> 个技能 · 完好 <strong>29</strong> 个 · 待配置 <strong>3</strong> 个</div>
-
+<div class="total">🎉 共计 <strong>31</strong> 个技能 · 完好 <strong>30</strong> 个 · 待配置 <strong>1</strong> 个（notion）</div>
 </body>
 </html>
