@@ -183,8 +183,8 @@ async function loadAbout() {
     // 等待JSON加载
     const data = await d;
 
-    const茉莉 = data.茉莉;
-    const老大 = data.老大;
+    const茉莉 = data['茉莉'];
+    const老大 = data['老大'];
 
     el.innerHTML = `
       <!-- 关于茉莉 -->
