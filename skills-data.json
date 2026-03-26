@@ -1,0 +1,244 @@
+{
+  "total": 36,
+  "ok": 31,
+  "warn": 3,
+  "error": 2,
+  "categories": [
+    {
+      "name": "核心能力 · 记忆与学习",
+      "icon": "🧠",
+      "count": 4,
+      "skills": [
+        {
+          "name": "self-improving-agent",
+          "desc": "自我反馈学习，犯错后自动记录经验",
+          "status": "ok"
+        },
+        {
+          "name": "memory-setup",
+          "desc": "持久记忆配置，让AI记住你的习惯",
+          "status": "ok"
+        },
+        {
+          "name": "proactive-agent",
+          "desc": "主动Agent，预判需求定时巡检",
+          "status": "ok"
+        },
+        {
+          "name": "ontology",
+          "desc": "知识图谱，结构化知识管理",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "信息获取 · 搜索与摘要",
+      "icon": "🧠",
+      "count": 5,
+      "skills": [
+        {
+          "name": "summarize",
+          "desc": "网页/PDF/视频一键总结摘要",
+          "status": "ok"
+        },
+        {
+          "name": "web-content-fetcher",
+          "desc": "任意网页抓取，含微信公众号",
+          "status": "ok"
+        },
+        {
+          "name": "youtube-watcher",
+          "desc": "YouTube字幕提取与总结",
+          "status": "ok"
+        },
+        {
+          "name": "tavily",
+          "desc": "AI优化深度搜索",
+          "status": "ok"
+        },
+        {
+          "name": "find-skills",
+          "desc": "智能发现和推荐新技能",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "数据处理 · 分析与可视化",
+      "icon": "🧠",
+      "count": 4,
+      "skills": [
+        {
+          "name": "duckdb-en",
+          "desc": "SQL数据库查询分析",
+          "status": "ok"
+        },
+        {
+          "name": "python-dataviz",
+          "desc": "Python图表生成（matplotlib/seaborn/plotly）",
+          "status": "ok"
+        },
+        {
+          "name": "stock-analysis",
+          "desc": "股票/加密货币分析，8维度评分",
+          "status": "ok"
+        },
+        {
+          "name": "stock-market-pro",
+          "desc": "股市技术分析，RSI/MACD/布林带图表",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "文档与媒体处理",
+      "icon": "🧠",
+      "count": 5,
+      "skills": [
+        {
+          "name": "nano-pdf",
+          "desc": "用说话的方式编辑PDF文件",
+          "status": "ok"
+        },
+        {
+          "name": "markdown-converter",
+          "desc": "万能格式转Markdown",
+          "status": "ok"
+        },
+        {
+          "name": "openai-whisper",
+          "desc": "本地语音转文字（无需上传）",
+          "status": "ok"
+        },
+        {
+          "name": "office-document-specialist-suite",
+          "desc": "Word/Excel/PPT 全能处理套件",
+          "status": "ok"
+        },
+        {
+          "name": "video-frames",
+          "desc": "视频帧提取与短clip制作",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "办公协作 · 文档与代码",
+      "icon": "🧠",
+      "count": 6,
+      "skills": [
+        {
+          "name": "feishu-doc",
+          "desc": "飞书文档读写",
+          "status": "ok"
+        },
+        {
+          "name": "feishu-doc-editor",
+          "desc": "飞书文档编辑创建",
+          "status": "ok"
+        },
+        {
+          "name": "feishu-wiki",
+          "desc": "飞书知识库",
+          "status": "ok"
+        },
+        {
+          "name": "feishu-drive",
+          "desc": "飞书云盘",
+          "status": "ok"
+        },
+        {
+          "name": "github",
+          "desc": "GitHub项目管理（已登录hulizz14）",
+          "status": "ok"
+        },
+        {
+          "name": "humanizer",
+          "desc": "去除AI写作痕迹，让文字更自然",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "系统与集成",
+      "icon": "🧠",
+      "count": 5,
+      "skills": [
+        {
+          "name": "weather",
+          "desc": "天气预报，开箱即用无需API",
+          "status": "ok"
+        },
+        {
+          "name": "gog",
+          "desc": "Google Workspace（Gmail/日历/文档）",
+          "status": "ok"
+        },
+        {
+          "name": "api-gateway",
+          "desc": "100+第三方API连接器",
+          "status": "warn"
+        },
+        {
+          "name": "notion",
+          "desc": "Notion笔记管理",
+          "status": "warn"
+        },
+        {
+          "name": "obsidian",
+          "desc": "Obsidian本地知识库",
+          "status": "warn"
+        }
+      ]
+    },
+    {
+      "name": "安全与元技能",
+      "icon": "🧠",
+      "count": 4,
+      "skills": [
+        {
+          "name": "skill-vetter",
+          "desc": "Skill安全审查，安装前检查风险",
+          "status": "ok"
+        },
+        {
+          "name": "skillhub-preference",
+          "desc": "技能源优先级策略",
+          "status": "ok"
+        },
+        {
+          "name": "autoclaw-browser",
+          "desc": "OpenClaw内置浏览器控制",
+          "status": "error"
+        },
+        {
+          "name": "autoglm-browser-agent",
+          "desc": "智能浏览器自动化",
+          "status": "error"
+        }
+      ]
+    },
+    {
+      "name": "🌸 茉莉专属",
+      "icon": "🧠",
+      "count": 3,
+      "skills": [
+        {
+          "name": "yuchuan-dashboard",
+          "desc": "禹川集团综合看板自动更新",
+          "status": "ok"
+        },
+        {
+          "name": "daily-report",
+          "desc": "每日早报自动生成发送",
+          "status": "ok"
+        },
+        {
+          "name": "memory-system",
+          "desc": "记忆持久化与可视化",
+          "status": "ok"
+        }
+      ]
+    }
+  ]
+}
