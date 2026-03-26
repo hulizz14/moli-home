@@ -319,13 +319,16 @@ async function loadMemory() {
     const tiers = [
       { layer: 'hot', label: '🔥 HOT', emoji: '🔥', cls: 'hot', limit: '≤2KB',
         desc: '当前会话+进行中任务+立即目标。每session重置，只保留真正热的。',
-        items: ['当前会话任务', '进行中工作', '今日待确认'] },
+        items: ['当前会话任务', '进行中工作', '今日待确认'],
+        detail: (d.tiers?.hot?.content || '').split('\n').filter(Boolean) },
       { layer: 'warm', label: '🌡️ WARM', emoji: '🌡️', cls: 'warm', limit: '≤5KB',
         desc: '用户偏好+稳定配置+常用技能状态。变更时更新。',
-        items: ['用户偏好', '系统偏好', '当前项目', '技能状态'] },
+        items: ['用户偏好', '系统偏好', '当前项目', '技能状态'],
+        detail: (d.tiers?.warm?.content || '').split('\n').filter(Boolean) },
       { layer: 'cold', label: '❄️ COLD', emoji: '❄️', cls: 'cold', limit: '≤10KB',
         desc: '长期归档：身份、教训库、项目里程碑。不含细节。',
-        items: ['核心身份', '关于老大', '教训库(永不犯)', '项目里程碑', '禁止事项'] },
+        items: ['核心身份', '教训库(永不犯)', '项目里程碑', '禁止事项'],
+        detail: (d.tiers?.cold?.content || '').split('\n').filter(Boolean) },
     ];
 
     const tierCards = tiers.map(t => `
@@ -335,9 +338,10 @@ async function loadMemory() {
           <span class="tier-name">${t.label}</span>
           <span class="tier-limit">${t.limit}</span>
         </div>
+        <div style="font-size:11px;color:#666;margin-bottom:10px;">${t.desc}</div>
         <div class="tier-content">
           <ul style="padding-left:0;list-style:none;">
-            ${t.items.map(i => `<li>${i}</li>`).join('')}
+            ${t.detail.map(line => `<li>${line}</li>`).join('')}
           </ul>
         </div>
       </div>
@@ -394,16 +398,15 @@ async function loadMemory() {
 async function loadCron() {
   const el = document.getElementById('cron');
   const jobs = [
-    { id: 'memory-maintenance', name: '记忆整理', icon: '🧠', time: '23:00', desc: '三层记忆自动精简+归档（HOT/WARM/COLD大小检查，14天以上日记录归档）', status: 'ok', last: '昨天' },
-    { id: 'daily-morning-report', name: '每日早报', icon: '📰', time: '8:30', desc: '生成并发送昨日工作汇报（含情报+回顾+待办）', status: 'ok', last: '今天' },
+    { id: 'daily-morning-report', name: '每日早报', icon: '📰', time: '8:30', desc: '生成并发送昨日工作汇报（含房地产情报+回顾+待办）', status: 'ok', last: '今天' },
     { id: 'afternoon-check', name: '下午跟踪', icon: '🔔', time: '14:30', desc: '关键节点跟踪提醒', status: 'ok', last: '昨天' },
     { id: 'evening-summary', name: '晚间汇总', icon: '🌙', time: '18:00', desc: '晚间工作总结汇报', status: 'ok', last: '昨天' },
-    { id: 'industry-intel', name: '行业情报', icon: '📡', time: '03:00', desc: 'Tavily自动抓取房地产+康养+REITs政策新闻', status: 'warn', last: '待确认' },
+    { id: 'memory-maintenance', name: '记忆整理', icon: '🧠', time: '23:00', desc: '三层记忆自动精简+归档（HOT/WARM/COLD大小检查，14天以上日记录归档）', status: 'ok', last: '昨天' },
     { id: 'hourly-backup', name: '每小时备份', icon: '💾', time: ':01', desc: '每小时系统状态ping提醒（静默00:00-08:00）', status: 'ok', last: '每小时' },
   ];
 
   const groups = [
-    { title: '📅 每日任务', jobs: jobs.filter(j => ['daily-morning-report','afternoon-check','evening-summary','industry-intel'].includes(j.id)) },
+    { title: '📅 每日任务', jobs: jobs.filter(j => ['daily-morning-report','afternoon-check','evening-summary'].includes(j.id)) },
     { title: '🔄 定时任务', jobs: jobs.filter(j => ['memory-maintenance','hourly-backup'].includes(j.id)) },
   ];
 
