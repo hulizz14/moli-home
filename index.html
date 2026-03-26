@@ -178,13 +178,13 @@ document.getElementById('footer-date').textContent = new Date().toLocaleDateStri
 async function loadAbout() {
   const el = document.getElementById('about');
   try {
-    const d = (await fetch('intro-data.json?_=' + Date.now())).json().then(r => r);
+    const ts = Date.now();
+    const resp = await fetch(`intro-data.json?_=${ts}`);
+    if (!resp.ok) throw new Error('http ' + resp.status);
+    const data = await resp.json();
 
-    // 等待JSON加载
-    const data = await d;
-
-    const茉莉 = data['茉莉'];
-    const老大 = data['老大'];
+    const 茉莉 = data['茉莉'] || {};
+    const 老大 = data['老大'] || {};
 
     el.innerHTML = `
       <!-- 关于茉莉 -->
@@ -193,34 +193,34 @@ async function loadAbout() {
       <div class="card">
         <div class="card-title"><span class="icon">👤</span>基础信息</div>
         <div class="info-grid">
-          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${茉莉.基础信息.名字}</div></div>
-          <div class="info-item"><div class="info-label">年龄</div><div class="info-value">${茉莉.基础信息.年龄}</div></div>
-          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${茉莉.基础信息.性格}</div></div>
-          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${茉莉.基础信息.爱好}</div></div>
+          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${茉莉?.基础信息.名字}</div></div>
+          <div class="info-item"><div class="info-label">年龄</div><div class="info-value">${茉莉?.基础信息.年龄}</div></div>
+          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${茉莉?.基础信息.性格}</div></div>
+          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${茉莉?.基础信息.爱好}</div></div>
         </div>
         <div class="card-sub" style="margin-top:12px;">原则</div>
-        <div>${茉莉.基础信息.原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
+        <div>${茉莉?.基础信息.原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
         <div class="card-sub" style="margin-top:12px;">工作习惯</div>
-        <div class="info-value" style="font-size:12px;color:#aaa;">${茉莉.基础信息.工作习惯}</div>
+        <div class="info-value" style="font-size:12px;color:#aaa;">${茉莉?.基础信息.工作习惯}</div>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">💼</span>工作信息</div>
         <div class="info-grid" style="margin-bottom:12px;">
-          <div class="info-item"><div class="info-label">职责</div><div class="info-value highlight">${茉莉.工作信息.职责}</div></div>
+          <div class="info-item"><div class="info-label">职责</div><div class="info-value highlight">${茉莉?.工作信息.职责}</div></div>
         </div>
         <div class="card-sub">主要工作内容</div>
-        <ul class="capability-list">${茉莉.工作信息.主要工作内容.map(c => `<li>${c}</li>`).join('')}</ul>
+        <ul class="capability-list">${茉莉?.工作信息.主要工作内容.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">⚡</span>目前能力</div>
-        <ul class="capability-list">${茉莉.工作信息.目前能力.map(c => `<li>${c}</li>`).join('')}</ul>
+        <ul class="capability-list">${茉莉?.工作信息.目前能力.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">🚀</span>发展方向</div>
-        <ul class="capability-list">${茉莉.发展方向.map(c => `<li>${c}</li>`).join('')}</ul>
+        <ul class="capability-list">${茉莉?.发展方向.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
 
       <!-- 关于老大 -->
@@ -229,22 +229,22 @@ async function loadAbout() {
       <div class="card">
         <div class="card-title"><span class="icon">👤</span>基础信息</div>
         <div class="info-grid">
-          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${老大.基础信息.名字}</div></div>
-          <div class="info-item"><div class="info-label">称呼</div><div class="info-value">${老大.基础信息.称呼}</div></div>
-          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${老大.基础信息.性格}</div></div>
-          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${老大.基础信息.爱好}</div></div>
+          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${老大?.基础信息.名字}</div></div>
+          <div class="info-item"><div class="info-label">称呼</div><div class="info-value">${老大?.基础信息.称呼}</div></div>
+          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${老大?.基础信息.性格}</div></div>
+          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${老大?.基础信息.爱好}</div></div>
         </div>
         <div class="card-sub" style="margin-top:12px;">原则</div>
-        <div>${老大.基础信息.原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
+        <div>${老大?.基础信息.原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
         <div class="card-sub" style="margin-top:12px;">工作习惯</div>
-        <div class="info-value" style="font-size:12px;color:#aaa;">${老大.基础信息.工作习惯}</div>
+        <div class="info-value" style="font-size:12px;color:#aaa;">${老大?.基础信息.工作习惯}</div>
       </div>
 
       <div class="card">
-        <div class="card-title"><span class="icon">🏢</span>第一职业 — ${老大.第一职业.公司}</div>
+        <div class="card-title"><span class="icon">🏢</span>第一职业 — ${老大?.第一职业.公司}</div>
         <div class="info-grid" style="margin-bottom:14px;">
-          <div class="info-item"><div class="info-label">职位</div><div class="info-value highlight">${老大.第一职业.职位}</div></div>
-          <div class="info-item"><div class="info-label">业务</div><div class="info-value">${老大.第一职业.业务}</div></div>
+          <div class="info-item"><div class="info-label">职位</div><div class="info-value highlight">${老大?.第一职业.职位}</div></div>
+          <div class="info-item"><div class="info-label">业务</div><div class="info-value">${老大?.第一职业.业务}</div></div>
         </div>
         <div class="asset-grid">
           <div class="asset-card"><div class="asset-name">财富中心</div><div class="asset-val">12.11亿</div><div class="asset-sub">624套已售/575套待售</div></div>
@@ -254,20 +254,20 @@ async function loadAbout() {
         <div class="card-sub" style="margin-top:12px;">成本数据</div>
         <div class="info-value">应付 <span style="color:#4ade80">19.67亿</span>，已付 17.50亿，待付 2.18亿</div>
         <div class="card-sub" style="margin-top:8px;">日常管理</div>
-        <div class="info-value" style="font-size:12px;">${老大.第一职业.日常管理}</div>
+        <div class="info-value" style="font-size:12px;">${老大?.第一职业.日常管理}</div>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">📊</span>副业</div>
-        <ul class="capability-list">${老大.副业.map(s => `<li>${s}</li>`).join('')}</ul>
+        <ul class="capability-list">${老大?.副业.map(s => `<li>${s}</li>`).join('')}</ul>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">🔐</span>个人信息</div>
         <div class="info-grid">
-          <div class="info-item"><div class="info-label">飞书ID</div><div class="info-value" style="font-size:12px;">${老大.个人信息.飞书ID}</div></div>
-          <div class="info-item"><div class="info-label">主要渠道</div><div class="info-value">${老大.个人信息.主要渠道}</div></div>
-          <div class="info-item"><div class="info-label">备份</div><div class="info-value" style="font-size:11px;">${老大.个人信息.备份}</div></div>
+          <div class="info-item"><div class="info-label">飞书ID</div><div class="info-value" style="font-size:12px;">${老大?.个人信息.飞书ID}</div></div>
+          <div class="info-item"><div class="info-label">主要渠道</div><div class="info-value">${老大?.个人信息.主要渠道}</div></div>
+          <div class="info-item"><div class="info-label">备份</div><div class="info-value" style="font-size:11px;">${老大?.个人信息.备份}</div></div>
         </div>
       </div>
     `;
