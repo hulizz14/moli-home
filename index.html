@@ -320,15 +320,15 @@ async function loadMemory() {
       { layer: 'hot', label: '🔥 HOT', emoji: '🔥', cls: 'hot', limit: '≤2KB',
         desc: '当前会话+进行中任务+立即目标。每session重置，只保留真正热的。',
         items: ['当前会话任务', '进行中工作', '今日待确认'],
-        detail: (d.tiers?.hot?.content || '').split('\n').filter(Boolean) },
+        detail: (d.tiers?.hot?.content || []).filter(Boolean) },
       { layer: 'warm', label: '🌡️ WARM', emoji: '🌡️', cls: 'warm', limit: '≤5KB',
         desc: '用户偏好+稳定配置+常用技能状态。变更时更新。',
         items: ['用户偏好', '系统偏好', '当前项目', '技能状态'],
-        detail: (d.tiers?.warm?.content || '').split('\n').filter(Boolean) },
+        detail: (d.tiers?.warm?.content || []).filter(Boolean) },
       { layer: 'cold', label: '❄️ COLD', emoji: '❄️', cls: 'cold', limit: '≤10KB',
         desc: '长期归档：身份、教训库、项目里程碑。不含细节。',
         items: ['核心身份', '教训库(永不犯)', '项目里程碑', '禁止事项'],
-        detail: (d.tiers?.cold?.content || '').split('\n').filter(Boolean) },
+        detail: (d.tiers?.cold?.content || []).filter(Boolean) },
     ];
 
     const tierCards = tiers.map(t => `
