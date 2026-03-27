@@ -178,10 +178,10 @@ document.getElementById('footer-date').textContent = new Date().toLocaleDateStri
 async function loadAbout() {
   const el = document.getElementById('about');
   try {
-    const data = window._introData;
+    const d = await (await fetch('intro-data.json?_=' + Date.now())).json();
 
-    const 茉莉 = data['茉莉'] || {};
-    const 老大 = data['老大'] || {};
+    const 茉莉 = d['茉莉'] || {};
+    const 老大 = d['老大'] || {};
 
     el.innerHTML = `
       <!-- 关于茉莉 -->
