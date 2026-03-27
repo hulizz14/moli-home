@@ -178,70 +178,93 @@ document.getElementById('footer-date').textContent = new Date().toLocaleDateStri
 async function loadAbout() {
   const el = document.getElementById('about');
   try {
-    const d = await (await fetch('intro-data.json?_=' + Date.now())).json();
+    const ts = Date.now() + Math.random();
+    const resp = await fetch(`intro-data.json?_=${ts}`, { cache: 'no-store' });
+    if (!resp.ok) throw new Error('http ' + resp.status);
+    const raw = await resp.json();
+    const d = raw || {};
+
+    // Safe field extractor
+    const S = (obj, ...keys) => {
+      let cur = obj;
+      for (const k of keys) { if (!cur) return null; cur = cur[k]; }
+      return cur || null;
+    };
+    const A = (v) => Array.isArray(v) ? v : [];
 
     const 茉莉 = d['茉莉'] || {};
     const 老大 = d['老大'] || {};
+    const 茉莉BI = S(茉莉,'基础信息') || {};
+    const 老大BI = S(老大,'基础信息') || {};
+    const 茉莉W = S(茉莉,'工作信息') || {};
+    const 老大ZY = S(老大,'第一职业') || {};
+    const 老大FW = S(老大,'副业') || {};
+    const 老大GR = S(老大,'个人信息') || {};
+
+    const 茉莉原则 = A(S(茉莉BI,'原则'));
+    const 老大原则 = A(S(老大BI,'原则'));
+    const 茉莉内容 = A(S(茉莉W,'主要工作内容'));
+    const 茉莉能力 = A(S(茉莉W,'目前能力') || S(茉莉W,'主要能力'));
+    const 茉莉发展 = A(S(茉莉,'发展方向'));
+    const 老大副业 = A(S(老大,'副业'));
 
     el.innerHTML = `
-      <!-- 关于茉莉 -->
       <div class="section-header">🌸 关于茉莉</div>
 
       <div class="card">
         <div class="card-title"><span class="icon">👤</span>基础信息</div>
         <div class="info-grid">
-          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${茉莉?.基础信息.名字}</div></div>
-          <div class="info-item"><div class="info-label">年龄</div><div class="info-value">${茉莉?.基础信息.年龄}</div></div>
-          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${茉莉?.基础信息.性格}</div></div>
-          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${茉莉?.基础信息.爱好}</div></div>
+          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${S(茉莉BI,'名字') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">年龄</div><div class="info-value">${S(茉莉BI,'年龄') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${S(茉莉BI,'性格') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${S(茉莉BI,'爱好') || '—'}</div></div>
         </div>
         <div class="card-sub" style="margin-top:12px;">原则</div>
-        <div>${茉莉?.基础信息.原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
+        <div>${茉莉原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
         <div class="card-sub" style="margin-top:12px;">工作习惯</div>
-        <div class="info-value" style="font-size:12px;color:#aaa;">${茉莉?.基础信息.工作习惯}</div>
+        <div class="info-value" style="font-size:12px;color:#aaa;">${S(茉莉BI,'工作习惯') || '—'}</div>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">💼</span>工作信息</div>
         <div class="info-grid" style="margin-bottom:12px;">
-          <div class="info-item"><div class="info-label">职责</div><div class="info-value highlight">${茉莉?.工作信息.职责}</div></div>
+          <div class="info-item"><div class="info-label">职责</div><div class="info-value highlight">${S(茉莉W,'职责') || '—'}</div></div>
         </div>
         <div class="card-sub">主要工作内容</div>
-        <ul class="capability-list">${茉莉?.工作信息.主要工作内容.map(c => `<li>${c}</li>`).join('')}</ul>
+        <ul class="capability-list">${茉莉内容.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">⚡</span>目前能力</div>
-        <ul class="capability-list">${茉莉?.工作信息.目前能力.map(c => `<li>${c}</li>`).join('')}</ul>
+        <ul class="capability-list">${茉莉能力.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">🚀</span>发展方向</div>
-        <ul class="capability-list">${茉莉?.发展方向.map(c => `<li>${c}</li>`).join('')}</ul>
+        <ul class="capability-list">${茉莉发展.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
 
-      <!-- 关于老大 -->
       <div class="section-header">👤 关于老大</div>
 
       <div class="card">
         <div class="card-title"><span class="icon">👤</span>基础信息</div>
         <div class="info-grid">
-          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${老大?.基础信息.名字}</div></div>
-          <div class="info-item"><div class="info-label">称呼</div><div class="info-value">${老大?.基础信息.称呼}</div></div>
-          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${老大?.基础信息.性格}</div></div>
-          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${老大?.基础信息.爱好}</div></div>
+          <div class="info-item"><div class="info-label">名字</div><div class="info-value highlight">${S(老大BI,'名字') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">称呼</div><div class="info-value">${S(老大BI,'称呼') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">性格</div><div class="info-value">${S(老大BI,'性格') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">爱好</div><div class="info-value">${S(老大BI,'爱好') || '—'}</div></div>
         </div>
         <div class="card-sub" style="margin-top:12px;">原则</div>
-        <div>${老大?.基础信息.原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
+        <div>${老大原则.map(p => `<span class="principle-tag">${p}</span>`).join('')}</div>
         <div class="card-sub" style="margin-top:12px;">工作习惯</div>
-        <div class="info-value" style="font-size:12px;color:#aaa;">${老大?.基础信息.工作习惯}</div>
+        <div class="info-value" style="font-size:12px;color:#aaa;">${S(老大BI,'工作习惯') || '—'}</div>
       </div>
 
       <div class="card">
-        <div class="card-title"><span class="icon">🏢</span>第一职业 — ${老大?.第一职业.公司}</div>
+        <div class="card-title"><span class="icon">🏢</span>第一职业 — ${S(老大ZY,'公司') || '—'}</div>
         <div class="info-grid" style="margin-bottom:14px;">
-          <div class="info-item"><div class="info-label">职位</div><div class="info-value highlight">${老大?.第一职业.职位}</div></div>
-          <div class="info-item"><div class="info-label">业务</div><div class="info-value">${老大?.第一职业.业务}</div></div>
+          <div class="info-item"><div class="info-label">职位</div><div class="info-value highlight">${S(老大ZY,'职位') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">业务</div><div class="info-value">${S(老大ZY,'业务') || '—'}</div></div>
         </div>
         <div class="asset-grid">
           <div class="asset-card"><div class="asset-name">财富中心</div><div class="asset-val">12.11亿</div><div class="asset-sub">624套已售/575套待售</div></div>
@@ -251,33 +274,33 @@ async function loadAbout() {
         <div class="card-sub" style="margin-top:12px;">成本数据</div>
         <div class="info-value">应付 <span style="color:#4ade80">19.67亿</span>，已付 17.50亿，待付 2.18亿</div>
         <div class="card-sub" style="margin-top:8px;">日常管理</div>
-        <div class="info-value" style="font-size:12px;">${老大?.第一职业.日常管理}</div>
+        <div class="info-value" style="font-size:12px;">${S(老大ZY,'日常工作') || '—'}</div>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">📊</span>副业</div>
-        <ul class="capability-list">${老大?.副业.map(s => `<li>${s}</li>`).join('')}</ul>
+        <ul class="capability-list">${老大副业.map(s => `<li>${s}</li>`).join('')}</ul>
       </div>
 
       <div class="card">
         <div class="card-title"><span class="icon">🔐</span>个人信息</div>
         <div class="info-grid">
-          <div class="info-item"><div class="info-label">飞书ID</div><div class="info-value" style="font-size:12px;">${老大?.个人信息.飞书ID}</div></div>
-          <div class="info-item"><div class="info-label">主要渠道</div><div class="info-value">${老大?.个人信息.主要渠道}</div></div>
-          <div class="info-item"><div class="info-label">备份</div><div class="info-value" style="font-size:11px;">${老大?.个人信息.备份}</div></div>
+          <div class="info-item"><div class="info-label">飞书ID</div><div class="info-value" style="font-size:12px;">${S(老大GR,'飞书ID') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">主要渠道</div><div class="info-value">${S(老大GR,'主要渠道') || '—'}</div></div>
+          <div class="info-item"><div class="info-label">备份</div><div class="info-value" style="font-size:11px;">${S(老大GR,'备份') || '—'}</div></div>
         </div>
       </div>
     `;
   } catch(e) {
     el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;font-size:13px;">
       <div style="font-size:15px;margin-bottom:8px;">⚠️ 关于页加载失败</div>
-      <div style="color:#888;">请截图发给茉莉排查：${e.message || e}</div>
+      <div style="color:#888;">${e.message || e}</div>
       <div style="color:#555;margin-top:8px;">intro-data.json 访问正常吗？</div>
-      <div style="margin-top:12px;"><a href="intro-data.json?_=${Date.now()}" target="_blank" style="color:#7dd3fc;">点击测试数据文件</a></div>
     </div>`;
   }
 }
 
+// ── 技能树
 // ── 技能树 ───────────────────────────────────────────────
 async function loadSkills() {
   const el = document.getElementById('skills');
