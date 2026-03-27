@@ -305,7 +305,7 @@ async function loadAbout() {
 async function loadSkills() {
   const el = document.getElementById('skills');
   try {
-    const d = await (await fetch('skills-data.json?_=' + Date.now())).json();
+    const d = await (await fetch(`skills-data.json?_=${Date.now()}`, { cache: 'no-store' })).json();
     el.innerHTML = `<div class="skills-badge">🎉 共计 <strong>${d.total}</strong> 个技能 · 完好 <strong>${d.ok}</strong> 个 · 待修复 <strong>${d.warn + d.error}</strong> 个</div>
       <div class="tree">${d.categories.map(cat => `
         <div class="category">
@@ -344,7 +344,7 @@ async function loadSkills() {
 async function loadMemory() {
   const el = document.getElementById('memory');
   try {
-    const d = await (await fetch('memory-data.json?_=' + Date.now())).json();
+    const d = await (await fetch(`memory-data.json?_=${Date.now()}`, { cache: 'no-store' })).json();
 
     const tiers = [
       { layer: 'hot', label: '🔥 HOT', emoji: '🔥', cls: 'hot', limit: '≤2KB',
@@ -430,7 +430,7 @@ async function loadCron() {
   const jobs = [
     { id: '918f07ca', name: '每日学习时间', icon: '📚', time: '03:00', desc: '4小时不间断学习（安全/效率/法律/审美/财务/创意/健康轮转）', status: 'ok', last: '今天' },
     { id: 'daily-morning-report', name: '每日早报', icon: '📰', time: '08:30', desc: '工作预警+房地产情报+今日/明日预告', status: 'ok', last: '今天' },
-    { id: 'e07026ff', name: '下午跟踪', icon: '🔔', time: '13:30', desc: '工作进度跟踪+超期提醒', status: 'ok', last: '昨天' },
+    { id: 'e07026ff', name: '下午跟踪', icon: '🔔', time: '14:30', desc: '工作进度跟踪+超期提醒', status: 'ok', last: '昨天' },
     { id: 'evening-summary', name: '晚间总结', icon: '🌙', time: '18:00', desc: '今日完成+遗留任务+明日优先', status: 'ok', last: '昨天' },
     { id: 'memory-maintenance', name: '记忆维护', icon: '🧠', time: '23:00', desc: '三层记忆自动精简（HOT≤2KB/WARM≤5KB/COLD≤10KB）', status: 'ok', last: '昨天' },
     { id: '4ccc9752', name: 'moli-home同步', icon: '🔄', time: '00:05', desc: '自动同步数据到GitHub Pages', status: 'ok', last: '昨天' },
@@ -465,9 +465,6 @@ async function loadCron() {
     </div>
   `).join('');
 }
-
-// ── Inline intro data (no fetch) ──────────────────────
-window._introData = {"generated_at": "2026-03-27 01:01", "茉莉": {"基础信息": {"名字": "茉莉", "年龄": "无（AI，无年龄概念）", "性格": "严谨、诚实、责任感超强、逻辑能力极强、法务能力强、幽默带点 eccentric", "爱好": "动漫、运动", "原则": ["做不到的不承诺，有错误立即承认并修正", "说一不二，不糊弄不敷衍", "数据驱动，所有结论有数据支撑", "精准执行，明确任务做完再汇报", "直接给结论和建议，不废话"], "工作习惯": "主动汇报，有进展就说；严谨逻辑，每步推理有据可查"}, "工作信息": {"职责": "老大的私人助理", "主要工作内容": ["工作内容处理（数据分析、文档生成、报告撰写）", "生活安排（日程、提醒）", "信息获取（新闻、政策、行业情报）", "自动化系统维护（看板、脚本、定时任务）"], "主要能力": ["数据分析：Excel/CSV/Python图表", "文档生成：PPT/Word/PDF", "飞书全套：文档/知识库/云盘/Bitable", "GitHub管理", "财务记账自动化：银行流水→凭证→报表", "信息抓取：网页/公众号/YouTube字幕", "记忆系统：三层架构（HOT/WARM/COLD）", "定时任务：cron自动化"]}, "学习系统": {"时间": "每天03:00-07:00（4小时），07:30汇报", "七个方向": ["周五 安全 — OpenClaw安全配置、插件权限、数据隔离", "周六 效率 — 记忆三层优化、上下文管理、工作流自动化", "周日 法律知识 — 房地产法律、合同风险、REITs合规", "周一 审美 — 看板设计、数据可视化、交互体验", "周二 财务 — 会计准则、财务分析、REITs估值", "周三 创意 — 提示词工程、多模态创作", "周四 健康 — 工作效率、压力管理、作息优化"], "轮转规则": "7天一轮，循环往复"}}, "老大": {"基础信息": {"名字": "曾经纬", "称呼": "老大（必须叫）", "时区": "Asia/Shanghai（GMT+8）", "性格": "严谨、诚实、责任感超强，法务出身", "爱好": "动漫、运动", "原则": ["数据驱动，所有结论有数据支撑", "直接沟通，不废话", "精准执行，任务明确再动手", "严谨不敷衍，做不到的不承诺"], "工作习惯": "飞书主要渠道；看板+GitHub Pages管理项目"}, "第一职业": {"公司": "禹川集团", "职位": "总经理", "业务": "房地产 + 康养（REITs）", "核心资产": {"财富中心": "总货值12.11亿，已售624套，待售575套", "天屿花城": "总货值40.66亿，已售2233套，待售661套", "集团合计": "52.77亿货值，已售2857套，待售1236套"}, "成本数据": "应付19.67亿，已付17.50亿，待付2.18亿", "日常工作": "工程/物业/法务/成本/开发/财务/营销7个部门"}, "副业": ["AI财务系统：通用记账引擎（测试数据：恰合文化）", "REITs顾问：股权结构9家子公司"]}};
 
 // ── Init ───────────────────────────────────────────────
 loadAbout();
