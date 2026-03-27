@@ -1,6 +1,6 @@
 {
-  "total": 40,
-  "ok": 40,
+  "total": 41,
+  "ok": 41,
   "warn": 0,
   "error": 0,
   "categories": [
@@ -229,7 +229,7 @@
     {
       "name": "系统与集成",
       "icon": "🧠",
-      "count": 2,
+      "count": 3,
       "skills": [
         {
           "name": "weather",
@@ -240,6 +240,12 @@
           "name": "api-gateway",
           "desc": "100+第三方API连接器",
           "status": "ok"
+        },
+        {
+          "name": "openclaw-browser-auto",
+          "status": "ok",
+          "desc": "OpenClaw浏览器自动化配置",
+          "emoji": "🌐"
         }
       ]
     },
