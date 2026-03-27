@@ -8,31 +8,31 @@
         {
           "name": "memory-1.0.2",
           "status": "ok",
-          "desc": "Infinite organized memory that complements your agent's built-in ",
+          "desc": "三层记忆系统（HOT/WARM/COLD），自动整理每日会话，重要信息长期留存，新session自动加载上下文",
           "trigger": "需要记忆/记住/查习惯/历史记录"
         },
         {
           "name": "self-improving-1.1.3",
           "status": "ok",
-          "desc": "Self-reflection + Self-criticism + learning from corrections. Age",
+          "desc": "犯错后自动记录教训，3次重复自动沉淀为Pattern，每次工作后主动复盘",
           "trigger": "被纠正/犯错/自我复盘/经验总结"
         },
         {
           "name": "agent-self-reflection-1.0.0",
           "status": "ok",
-          "desc": "Periodic self-reflection on recent sessions. Analyzes what went w",
+          "desc": "定期自动复盘近期工作表现，发现薄弱环节，生成改进建议",
           "trigger": "复盘/反思/检查近期表现"
         },
         {
           "name": "find-skills",
           "status": "ok",
-          "desc": "Helps users discover and install agent skills when they ask quest",
+          "desc": "在clawhub上搜索和安装新技能，帮你发现并配置新工具",
           "trigger": "有没有skill能做X/扩展能力"
         },
         {
           "name": "skill-creator",
           "status": "ok",
-          "desc": "",
+          "desc": "从零创建新的自动化技能，将重复工作封装为可复用工具",
           "trigger": "创建新skill/author a skill"
         }
       ]
@@ -45,19 +45,19 @@
         {
           "name": "tavily",
           "status": "ok",
-          "desc": "Web search via Tavily API (alternative to Brave). Use when the us",
+          "desc": "AI优化的深度网络搜索，抓取房地产政策、康养REITs、等行业情报",
           "trigger": "搜索/查一下/行业情报/政策查询"
         },
         {
           "name": "youtube-watcher",
           "status": "ok",
-          "desc": "Fetch and read transcripts from YouTube videos. Use when you need",
+          "desc": "提取YouTube视频字幕并总结，帮你快速了解视频核心内容",
           "trigger": "YouTube字幕/视频内容"
         },
         {
           "name": "summarize",
           "status": "ok",
-          "desc": "",
+          "desc": "一键总结网页、PDF、播客、会议的要点，提取关键信息",
           "trigger": "总结/摘要/概括/提炼要点"
         }
       ]
@@ -70,31 +70,31 @@
         {
           "name": "python-dataviz",
           "status": "ok",
-          "desc": "Professional data visualization using Python (matplotlib, seaborn",
+          "desc": "用Python生成专业图表（折线/柱状/饼图/热力图等），支持导出PNG/SVG",
           "trigger": "生成图表/可视化/数据报表/Python画图"
         },
         {
           "name": "office-document-specialist-suite",
           "status": "ok",
-          "desc": "Advanced suite for creating, editing, and analyzing Microsoft Off",
+          "desc": "全自动生成Word方案、Excel报表、PPT述职文档，支持模板填充",
           "trigger": "生成Word/生成Excel/生成PPT"
         },
         {
           "name": "architecture-designer",
           "status": "ok",
-          "desc": "Use when designing new system architecture, reviewing existing de",
+          "desc": "设计复杂系统架构，规划财务系统、看板等大型项目的模块划分",
           "trigger": "系统设计/架构规划/财务系统"
         },
         {
           "name": "code-1.0.4",
           "status": "ok",
-          "desc": "Coding workflow with planning, implementation, verification, and ",
+          "desc": "完整代码工作流：需求分析→编写→测试→调试一条龙",
           "trigger": "写代码/编程/开发脚本"
         },
         {
           "name": "debug-pro-1.0.0",
           "status": "ok",
-          "desc": "",
+          "desc": "智能定位代码报错原因，给出修复方案并验证",
           "trigger": "代码报错/bug调试/修复代码"
         }
       ]
@@ -107,25 +107,25 @@
         {
           "name": "nano-pdf",
           "status": "ok",
-          "desc": "Edit PDFs with natural-language instructions using the nano-pdf C",
+          "desc": "用自然语言指令编辑PDF内容，修改文字、换图、调整布局",
           "trigger": "编辑PDF/修改PDF内容"
         },
         {
           "name": "openai-whisper",
           "status": "ok",
-          "desc": "Local speech-to-text with the Whisper CLI (no API key).",
+          "desc": "本地语音转文字（不离线上传），支持录音、视频字幕快速提取",
           "trigger": "语音转文字/录音转文本/字幕"
         },
         {
           "name": "video-frames",
           "status": "ok",
-          "desc": "",
+          "desc": "从视频中提取指定帧，或截取片段制作短clip",
           "trigger": "提取视频帧/截图视频/制作clip"
         },
         {
           "name": "ffmpeg-video-editor-1.0.0",
           "status": "ok",
-          "desc": "Generate FFmpeg commands from natural language video editing requ",
+          "desc": "用自然语言生成FFmpeg命令，完成视频剪辑、格式转换、压缩等",
           "trigger": "视频剪辑/格式转换"
         }
       ]
@@ -138,43 +138,43 @@
         {
           "name": "feishu-doc",
           "status": "ok",
-          "desc": "",
+          "desc": "读取飞书文档、知识库、表格内容，获取最新数据",
           "trigger": "读飞书文档/看wiki/写飞书文档"
         },
         {
           "name": "feishu-wiki",
           "status": "ok",
-          "desc": "",
+          "desc": "在飞书知识库中导航，查找相关文档和节点",
           "trigger": "知识库导航/wiki节点"
         },
         {
           "name": "feishu-drive",
           "status": "ok",
-          "desc": "",
+          "desc": "管理飞书云盘：上传文件、下载备份、整理目录结构",
           "trigger": "飞书云盘/上传下载文件"
         },
         {
           "name": "feishu-chat-history",
           "status": "ok",
-          "desc": ">",
+          "desc": "读取飞书群聊记录，提取关键讨论内容和决策结论",
           "trigger": "看群聊记录/群里聊了啥"
         },
         {
           "name": "feishu-cron-reminder",
           "status": "ok",
-          "desc": ">",
+          "desc": "在飞书定时推送提醒，支持每日、每周、每小时等多种周期",
           "trigger": "定时提醒/cron/定期飞书通知"
         },
         {
           "name": "feishu-perm",
           "status": "ok",
-          "desc": "|",
+          "desc": "管理飞书文档的访问权限，设置谁可以看/编辑/评论",
           "trigger": "飞书权限/共享文档/协作者"
         },
         {
           "name": "feishu-screenshot",
           "status": "ok",
-          "desc": ">",
+          "desc": "截取飞书界面图片，保存为本地文件",
           "trigger": "飞书截图/界面捕捉"
         }
       ]
@@ -187,7 +187,7 @@
         {
           "name": "frontend-design-3",
           "status": "ok",
-          "desc": "Create distinctive, production-grade frontend interfaces with hig",
+          "desc": "生成高设计质量的前端界面，提供HTML/CSS/React组件代码",
           "trigger": "设计前端界面/改善网页样式/HTML CSS"
         }
       ]
@@ -200,25 +200,25 @@
         {
           "name": "git-essentials-1.0.0",
           "status": "ok",
-          "desc": "Essential Git commands and workflows for version control, branchi",
+          "desc": "Git版本控制：提交记录、分支管理、解决冲突、推送拉取",
           "trigger": "git/commit/push/分支/冲突"
         },
         {
           "name": "weather",
           "status": "ok",
-          "desc": "",
+          "desc": "查询任意城市当前天气和未来7天预报，无需API Key",
           "trigger": "天气/多少度/下雨吗/温度"
         },
         {
           "name": "openclaw-browser-auto",
           "status": "ok",
-          "desc": "",
+          "desc": "通过CDP协议控制Chrome浏览器，自动填表、点击、抓取动态内容",
           "trigger": "浏览器自动化/填表/抓取动态网页"
         },
         {
           "name": "ontology",
           "status": "ok",
-          "desc": "Typed knowledge graph for structured agent memory and composable ",
+          "desc": "构建知识图谱，管理实体（人/公司/项目）及其关系，辅助推理",
           "trigger": "知识图谱/实体关系/remember X is Y"
         }
       ]
@@ -231,19 +231,19 @@
         {
           "name": "brainstorming-0.1.0",
           "status": "ok",
-          "desc": "You MUST use this before any creative work - creating features, b",
+          "desc": "发散思维，生成大量创意想法，帮你找到独特的解决方案",
           "trigger": "头脑风暴/创意发散/方案构思"
         },
         {
           "name": "writing-plans-0.1.0",
           "status": "ok",
-          "desc": "Use when you have a spec or requirements for a multi-step task, b",
+          "desc": "将模糊想法拆解为可执行的具体步骤，形成可落地的计划文档",
           "trigger": "写计划/制定方案/规划步骤"
         },
         {
           "name": "executing-plans-0.1.0",
           "status": "ok",
-          "desc": "Use when you have a written implementation plan to execute in a s",
+          "desc": "按照已有计划自动执行任务，逐步完成目标",
           "trigger": "按计划执行/执行任务"
         }
       ]
