@@ -1,13 +1,13 @@
 {
-  "total": 33,
-  "ok": 33,
+  "total": 38,
+  "ok": 38,
   "warn": 0,
   "error": 0,
   "categories": [
     {
       "name": "核心能力 · 记忆与学习",
       "icon": "🧠",
-      "count": 4,
+      "count": 5,
       "skills": [
         {
           "name": "self-improving-agent",
@@ -20,21 +20,28 @@
           "status": "ok"
         },
         {
-          "name": "proactive-agent",
-          "desc": "主动Agent，预判需求定时巡检",
-          "status": "ok"
-        },
-        {
           "name": "ontology",
           "desc": "知识图谱，结构化知识管理",
           "status": "ok"
+        },
+        {
+          "name": "memory-1.0.2",
+          "status": "ok",
+          "desc": "无限分层记忆系统",
+          "emoji": "🧠"
+        },
+        {
+          "name": "self-improving-1.1.3",
+          "status": "ok",
+          "desc": "自我反馈学习，犯错后自动记录经验",
+          "emoji": "🔄"
         }
       ]
     },
     {
       "name": "信息获取 · 搜索与摘要",
       "icon": "🧠",
-      "count": 5,
+      "count": 6,
       "skills": [
         {
           "name": "summarize",
@@ -60,6 +67,12 @@
           "name": "find-skills",
           "desc": "智能发现和推荐新技能",
           "status": "ok"
+        },
+        {
+          "name": "find-skills",
+          "status": "ok",
+          "desc": "智能发现和推荐新技能",
+          "emoji": "🔍"
         }
       ]
     },
@@ -93,7 +106,7 @@
     {
       "name": "文档与媒体处理",
       "icon": "🧠",
-      "count": 5,
+      "count": 7,
       "skills": [
         {
           "name": "nano-pdf",
@@ -119,13 +132,25 @@
           "name": "video-frames",
           "desc": "视频帧提取与短clip制作",
           "status": "ok"
+        },
+        {
+          "name": "video-frames-1.0.0",
+          "status": "ok",
+          "desc": "视频帧提取与短clip制作（ffmpeg）",
+          "emoji": "🎞️"
+        },
+        {
+          "name": "openai-whisper",
+          "status": "ok",
+          "desc": "本地语音转文字（无需上传）",
+          "emoji": "🎤"
         }
       ]
     },
     {
       "name": "办公协作 · 文档与代码",
       "icon": "🧠",
-      "count": 6,
+      "count": 11,
       "skills": [
         {
           "name": "feishu-doc",
@@ -156,6 +181,36 @@
           "name": "humanizer",
           "desc": "去除AI写作痕迹，让文字更自然",
           "status": "ok"
+        },
+        {
+          "name": "feishu-chat-history",
+          "status": "ok",
+          "desc": "飞书群聊记录读取与总结",
+          "emoji": "💬"
+        },
+        {
+          "name": "feishu-cron-reminder",
+          "status": "ok",
+          "desc": "飞书定时提醒任务创建",
+          "emoji": "⏰"
+        },
+        {
+          "name": "feishu-perm",
+          "status": "ok",
+          "desc": "飞书文档权限管理",
+          "emoji": "🔐"
+        },
+        {
+          "name": "git-essentials-1.0.0",
+          "status": "ok",
+          "desc": "Git版本控制与协作命令",
+          "emoji": "🌳"
+        },
+        {
+          "name": "feishu-wiki",
+          "status": "ok",
+          "desc": "飞书知识库导航",
+          "emoji": "📚"
         }
       ]
     },
@@ -179,7 +234,7 @@
     {
       "name": "安全与元技能",
       "icon": "🧠",
-      "count": 4,
+      "count": 3,
       "skills": [
         {
           "name": "skill-vetter",
@@ -192,11 +247,6 @@
           "status": "ok"
         },
         {
-          "name": "autoclaw-browser",
-          "desc": "OpenClaw内置浏览器控制",
-          "status": "ok"
-        },
-        {
           "name": "autoglm-browser-agent",
           "desc": "智能浏览器自动化",
           "status": "ok"
@@ -206,24 +256,8 @@
     {
       "name": "🌸 茉莉专属",
       "icon": "🧠",
-      "count": 3,
-      "skills": [
-        {
-          "name": "yuchuan-dashboard",
-          "desc": "禹川集团综合看板自动更新",
-          "status": "ok"
-        },
-        {
-          "name": "daily-report",
-          "desc": "每日早报自动生成发送",
-          "status": "ok"
-        },
-        {
-          "name": "memory-system",
-          "desc": "记忆持久化与可视化",
-          "status": "ok"
-        }
-      ]
+      "count": 0,
+      "skills": []
     }
   ],
   "learning_queue": [
