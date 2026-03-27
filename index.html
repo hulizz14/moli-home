@@ -293,9 +293,9 @@ async function loadAbout() {
     `;
   } catch(e) {
     el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;font-size:13px;">
-      <div style="font-size:15px;margin-bottom:8px;">⚠️ 关于页加载失败</div>
+      <div style="font-size:15px;margin-bottom:8px;">⚠️ 技能树加载失败</div>
       <div style="color:#888;">${e.message || e}</div>
-      <div style="color:#555;margin-top:8px;">intro-data.json 访问正常吗？</div>
+      <div style="color:#555;margin-top:8px;">skills-data.json 访问正常吗？</div>
     </div>`;
   }
 }
@@ -310,7 +310,7 @@ async function loadSkills() {
       <div class="tree">${d.categories.map(cat => `
         <div class="category">
           <div class="cat-header">
-            <span class="cat-icon">${cat.icon}</span>
+            <span class="cat-icon">${cat.emoji}</span>
             <span class="cat-name">${cat.name}</span>
             <span class="cat-count">${cat.count}个</span>
           </div>
@@ -332,10 +332,10 @@ async function loadSkills() {
       </div>`;
   } catch(e) {
     el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;font-size:13px;">
-      <div style="font-size:15px;margin-bottom:8px;">⚠️ 关于页加载失败</div>
+      <div style="font-size:15px;margin-bottom:8px;">⚠️ 技能树加载失败</div>
       <div style="color:#888;">请截图发给茉莉排查：${e.message || e}</div>
-      <div style="color:#555;margin-top:8px;">intro-data.json 访问正常吗？</div>
-      <div style="margin-top:12px;"><a href="intro-data.json?_=${Date.now()}" target="_blank" style="color:#7dd3fc;">点击测试数据文件</a></div>
+      <div style="color:#555;margin-top:8px;">skills-data.json 访问正常吗？</div>
+      <div style="margin-top:12px;"><a href="skills-data.json?_=${Date.now()}" target="_blank" style="color:#7dd3fc;">点击测试数据文件</a></div>
     </div>`;
   }
 }
