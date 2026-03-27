@@ -269,7 +269,12 @@ async function loadAbout() {
       </div>
     `;
   } catch(e) {
-    el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;">加载失败，请刷新重试。</div>`;
+    el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;font-size:13px;">
+      <div style="font-size:15px;margin-bottom:8px;">⚠️ 关于页加载失败</div>
+      <div style="color:#888;">请截图发给茉莉排查：${e.message || e}</div>
+      <div style="color:#555;margin-top:8px;">intro-data.json 访问正常吗？</div>
+      <div style="margin-top:12px;"><a href="intro-data.json?_=${Date.now()}" target="_blank" style="color:#7dd3fc;">点击测试数据文件</a></div>
+    </div>`;
   }
 }
 
@@ -303,7 +308,12 @@ async function loadSkills() {
         <div class="legend-item"><div class="legend-dot" style="background:#4d1a1a"></div>🔴 需手动修复</div>
       </div>`;
   } catch(e) {
-    el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;">加载失败，请刷新重试。</div>`;
+    el.innerHTML = `<div style="color:#f87171;text-align:center;padding:60px 0;font-size:13px;">
+      <div style="font-size:15px;margin-bottom:8px;">⚠️ 关于页加载失败</div>
+      <div style="color:#888;">请截图发给茉莉排查：${e.message || e}</div>
+      <div style="color:#555;margin-top:8px;">intro-data.json 访问正常吗？</div>
+      <div style="margin-top:12px;"><a href="intro-data.json?_=${Date.now()}" target="_blank" style="color:#7dd3fc;">点击测试数据文件</a></div>
+    </div>`;
   }
 }
 
