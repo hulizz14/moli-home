@@ -1,6 +1,6 @@
 {
-  "total": 38,
-  "ok": 38,
+  "total": 40,
+  "ok": 40,
   "warn": 0,
   "error": 0,
   "categories": [
@@ -79,7 +79,7 @@
     {
       "name": "数据处理 · 分析与可视化",
       "icon": "🧠",
-      "count": 4,
+      "count": 6,
       "skills": [
         {
           "name": "duckdb-en",
@@ -100,6 +100,18 @@
           "name": "stock-market-pro",
           "desc": "股市技术分析，RSI/MACD/布林带图表",
           "status": "ok"
+        },
+        {
+          "name": "architecture-designer",
+          "status": "ok",
+          "desc": "系统架构设计，财务系统规划与评审",
+          "emoji": "🏗️"
+        },
+        {
+          "name": "frontend-design-3",
+          "status": "ok",
+          "desc": "高设计质量前端界面生成（HTML/CSS/React）",
+          "emoji": "🎨"
         }
       ]
     },
