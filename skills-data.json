@@ -240,5 +240,13 @@
         }
       ]
     }
-  ]
+  ],
+  "learning_queue": [
+    "openclaw 安全配置深化",
+    "context-management 效率优化",
+    "legal-knowledge 法律知识",
+    "data-visualization 审美",
+    "creative-writing 创意"
+  ],
+  "generated_at": "2026-03-27 01:01"
 }

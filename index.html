@@ -395,17 +395,21 @@ async function loadMemory() {
 async function loadCron() {
   const el = document.getElementById('cron');
   const jobs = [
-    { id: 'daily-morning-report', name: '每日早报', icon: '📰', time: '8:30', desc: '生成并发送昨日工作汇报（含房地产情报+回顾+待办）', status: 'ok', last: '今天' },
-    { id: 'afternoon-check', name: '下午跟踪', icon: '🔔', time: '14:30', desc: '关键节点跟踪提醒', status: 'ok', last: '昨天' },
-    { id: 'evening-summary', name: '晚间汇总', icon: '🌙', time: '18:00', desc: '晚间工作总结汇报', status: 'ok', last: '昨天' },
-    { id: 'memory-maintenance', name: '记忆整理', icon: '🧠', time: '23:00', desc: '三层记忆自动精简+归档（HOT/WARM/COLD大小检查，14天以上日记录归档）', status: 'ok', last: '昨天' },
-    { id: 'hourly-backup', name: '每小时备份', icon: '💾', time: ':01', desc: '每小时系统状态ping提醒（静默00:00-08:00）', status: 'ok', last: '每小时' },
+    { id: '918f07ca', name: '每日学习时间', icon: '📚', time: '03:00', desc: '4小时不间断学习（安全/效率/法律/审美/财务/创意/健康轮转）', status: 'ok', last: '今天' },
+    { id: 'daily-morning-report', name: '每日早报', icon: '📰', time: '08:30', desc: '工作预警+房地产情报+今日/明日预告', status: 'ok', last: '今天' },
+    { id: 'e07026ff', name: '下午跟踪', icon: '🔔', time: '13:30', desc: '工作进度跟踪+超期提醒', status: 'ok', last: '昨天' },
+    { id: 'evening-summary', name: '晚间总结', icon: '🌙', time: '18:00', desc: '今日完成+遗留任务+明日优先', status: 'ok', last: '昨天' },
+    { id: 'memory-maintenance', name: '记忆维护', icon: '🧠', time: '23:00', desc: '三层记忆自动精简（HOT≤2KB/WARM≤5KB/COLD≤10KB）', status: 'ok', last: '昨天' },
+    { id: '4ccc9752', name: 'moli-home同步', icon: '🔄', time: '00:05', desc: '自动同步数据到GitHub Pages', status: 'ok', last: '昨天' },
+    { id: '5033d341', name: 'moli-home午间同步', icon: '🔄', time: '12:00', desc: '学习日志完成后自动同步moli-home', status: 'ok', last: '昨天' },
   ];
 
   const groups = [
-    { title: '📅 每日任务', jobs: jobs.filter(j => ['daily-morning-report','afternoon-check','evening-summary'].includes(j.id)) },
-    { title: '🔄 定时任务', jobs: jobs.filter(j => ['memory-maintenance','hourly-backup'].includes(j.id)) },
+    { title: '📅 每日任务', jobs: jobs.filter(j => ['daily-morning-report','e07026ff','evening-summary'].includes(j.id)) },
+    { title: '🔄 系统维护', jobs: jobs.filter(j => ['memory-maintenance','4ccc9752','5033d341'].includes(j.id)) },
+    { title: '📚 持续学习', jobs: jobs.filter(j => ['918f07ca'].includes(j.id)) },
   ];
+
 
   el.innerHTML = groups.map(g => `
     <div class="cron-section-title">${g.title}</div>
