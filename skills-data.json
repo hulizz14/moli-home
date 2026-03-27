@@ -1,6 +1,6 @@
 {
-  "total": 36,
-  "ok": 36,
+  "total": 33,
+  "ok": 33,
   "warn": 0,
   "error": 0,
   "categories": [
@@ -162,7 +162,7 @@
     {
       "name": "系统与集成",
       "icon": "🧠",
-      "count": 5,
+      "count": 2,
       "skills": [
         {
           "name": "weather",
@@ -170,23 +170,8 @@
           "status": "ok"
         },
         {
-          "name": "gog",
-          "desc": "Google Workspace（Gmail/日历/文档）",
-          "status": "ok"
-        },
-        {
           "name": "api-gateway",
           "desc": "100+第三方API连接器",
-          "status": "ok"
-        },
-        {
-          "name": "notion",
-          "desc": "Notion笔记管理",
-          "status": "ok"
-        },
-        {
-          "name": "obsidian",
-          "desc": "Obsidian本地知识库",
           "status": "ok"
         }
       ]
