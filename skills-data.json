@@ -1,307 +1,254 @@
 {
   "categories": [
     {
-      "name": "🌟 常态启用 · 核心能力",
+      "name": "🌟 常态核心能力",
       "emoji": "🌟",
+      "count": 5,
       "skills": [
         {
           "name": "memory-1.0.2",
-          "desc": "无限分层记忆系统",
-          "trigger": "需要记忆/记住/查习惯/历史记录",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Infinite organized memory that complements your agent's built-in ",
+          "trigger": "需要记忆/记住/查习惯/历史记录"
         },
         {
           "name": "self-improving-1.1.3",
-          "desc": "自我反馈学习，犯错自动记录",
-          "trigger": "被纠正/犯错/自我复盘/经验总结",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Self-reflection + Self-criticism + learning from corrections. Age",
+          "trigger": "被纠正/犯错/自我复盘/经验总结"
         },
         {
           "name": "agent-self-reflection-1.0.0",
-          "desc": "定期自我复盘",
-          "trigger": "复盘/反思工作/检查近期表现",
-          "usage": "常态",
-          "status": "error",
-          "emoji": "⚠️"
+          "status": "ok",
+          "desc": "Periodic self-reflection on recent sessions. Analyzes what went w",
+          "trigger": "复盘/反思/检查近期表现"
         },
         {
           "name": "find-skills",
-          "desc": "发现和安装新技能",
-          "trigger": "有没有能做X的skill/扩展能力",
-          "usage": "按需",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Helps users discover and install agent skills when they ask quest",
+          "trigger": "有没有skill能做X/扩展能力"
         },
         {
-          "name": "skill-creator-0.1.0",
-          "desc": "创建和优化技能",
-          "trigger": "创建新skill/写自动化工具",
-          "usage": "按需",
+          "name": "skill-creator",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "",
+          "trigger": "创建新skill/author a skill"
         }
-      ],
-      "count": 5
+      ]
     },
     {
-      "name": "🔍 信息获取 · 搜索与情报",
+      "name": "🔍 信息获取",
       "emoji": "🔍",
-      "skills": [],
-      "count": 0
+      "count": 3,
+      "skills": [
+        {
+          "name": "tavily",
+          "status": "ok",
+          "desc": "Web search via Tavily API (alternative to Brave). Use when the us",
+          "trigger": "搜索/查一下/行业情报/政策查询"
+        },
+        {
+          "name": "youtube-watcher",
+          "status": "ok",
+          "desc": "Fetch and read transcripts from YouTube videos. Use when you need",
+          "trigger": "YouTube字幕/视频内容"
+        },
+        {
+          "name": "summarize",
+          "status": "ok",
+          "desc": "",
+          "trigger": "总结/摘要/概括/提炼要点"
+        }
+      ]
     },
     {
-      "name": "📊 数据处理 · 分析与可视化",
+      "name": "📊 数据处理",
       "emoji": "📊",
+      "count": 5,
       "skills": [
         {
           "name": "python-dataviz",
-          "desc": "Python图表生成",
-          "trigger": "生成图表/可视化/数据报表/Python画图",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Professional data visualization using Python (matplotlib, seaborn",
+          "trigger": "生成图表/可视化/数据报表/Python画图"
         },
         {
           "name": "office-document-specialist-suite",
-          "desc": "Word/Excel/PPT处理",
-          "trigger": "生成Word/生成Excel/生成PPT",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Advanced suite for creating, editing, and analyzing Microsoft Off",
+          "trigger": "生成Word/生成Excel/生成PPT"
         },
         {
           "name": "architecture-designer",
-          "desc": "系统架构设计",
-          "trigger": "系统设计/架构规划/财务系统/模块划分",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Use when designing new system architecture, reviewing existing de",
+          "trigger": "系统设计/架构规划/财务系统"
         },
         {
           "name": "code-1.0.4",
-          "desc": "代码工作流（规划+实现+验证）",
-          "trigger": "写代码/编程/开发脚本/代码任务",
-          "usage": "常态",
-          "status": "error",
-          "emoji": "⚠️"
+          "status": "ok",
+          "desc": "Coding workflow with planning, implementation, verification, and ",
+          "trigger": "写代码/编程/开发脚本"
         },
         {
           "name": "debug-pro-1.0.0",
-          "desc": "代码调试",
-          "trigger": "代码报错/调试/bug/修复代码",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
+          "status": "ok",
+          "desc": "",
+          "trigger": "代码报错/bug调试/修复代码"
         }
-      ],
-      "count": 5
+      ]
     },
     {
-      "name": "📄 文档与媒体处理",
+      "name": "📄 文档与媒体",
       "emoji": "📄",
+      "count": 4,
       "skills": [
         {
           "name": "nano-pdf",
-          "desc": "自然语言编辑PDF",
-          "trigger": "编辑PDF/修改PDF/编辑合同扫描件",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "video-frames-1.0.0",
-          "desc": "视频帧提取",
-          "trigger": "提取视频帧/截图视频/制作视频片段",
-          "usage": "按需",
-          "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "ffmpeg-video-editor-1.0.0",
-          "desc": "FFmpeg视频编辑",
-          "trigger": "视频剪辑/格式转换/视频处理",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
+          "desc": "Edit PDFs with natural-language instructions using the nano-pdf C",
+          "trigger": "编辑PDF/修改PDF内容"
         },
         {
           "name": "openai-whisper",
-          "desc": "本地语音转文字",
-          "trigger": "语音转文字/录音转文本/视频字幕",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Local speech-to-text with the Whisper CLI (no API key).",
+          "trigger": "语音转文字/录音转文本/字幕"
+        },
+        {
+          "name": "video-frames",
+          "status": "ok",
+          "desc": "",
+          "trigger": "提取视频帧/截图视频/制作clip"
+        },
+        {
+          "name": "ffmpeg-video-editor-1.0.0",
+          "status": "ok",
+          "desc": "Generate FFmpeg commands from natural language video editing requ",
+          "trigger": "视频剪辑/格式转换"
         }
-      ],
-      "count": 4
+      ]
     },
     {
-      "name": "🏢 办公协作 · 飞书全家桶",
+      "name": "🏢 飞书全家桶",
       "emoji": "🏢",
+      "count": 7,
       "skills": [
         {
-          "name": "feishu-doc-1.2.7",
-          "desc": "飞书文档/知识库读取",
-          "trigger": "读飞书文档/看wiki/查知识库",
-          "usage": "常态",
+          "name": "feishu-doc",
           "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "feishu-drive-1.0.0",
-          "desc": "飞书云盘管理",
-          "trigger": "飞书云盘/上传下载/管理文件",
-          "usage": "常态",
-          "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "feishu-chat-history",
-          "desc": "飞书群聊记录",
-          "trigger": "看群聊/群里聊了啥/群消息",
-          "usage": "按需",
-          "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "feishu-cron-reminder",
-          "desc": "飞书定时提醒",
-          "trigger": "定时提醒/定期通知/cron提醒",
-          "usage": "常态",
-          "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "feishu-perm",
-          "desc": "飞书权限管理",
-          "trigger": "飞书权限/共享/访问权限/协作者",
-          "usage": "按需",
-          "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "feishu-screenshot",
-          "desc": "飞书截图",
-          "trigger": "飞书截图/屏幕截图/捕捉界面",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
+          "desc": "",
+          "trigger": "读飞书文档/看wiki/写飞书文档"
         },
         {
           "name": "feishu-wiki",
-          "desc": "飞书知识库导航",
-          "trigger": "知识库/导航wiki/查节点",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "",
+          "trigger": "知识库导航/wiki节点"
         },
         {
-          "name": "feishu-doc-editor",
-          "desc": "飞书文档编辑创建",
-          "trigger": "写飞书文档/创建页面/更新知识库",
-          "usage": "常态",
+          "name": "feishu-drive",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "",
+          "trigger": "飞书云盘/上传下载文件"
+        },
+        {
+          "name": "feishu-chat-history",
+          "status": "ok",
+          "desc": ">",
+          "trigger": "看群聊记录/群里聊了啥"
+        },
+        {
+          "name": "feishu-cron-reminder",
+          "status": "ok",
+          "desc": ">",
+          "trigger": "定时提醒/cron/定期飞书通知"
+        },
+        {
+          "name": "feishu-perm",
+          "status": "ok",
+          "desc": "|",
+          "trigger": "飞书权限/共享文档/协作者"
+        },
+        {
+          "name": "feishu-screenshot",
+          "status": "ok",
+          "desc": ">",
+          "trigger": "飞书截图/界面捕捉"
         }
-      ],
-      "count": 8
+      ]
     },
     {
       "name": "🎨 前端与设计",
       "emoji": "🎨",
+      "count": 1,
       "skills": [
         {
           "name": "frontend-design-3",
-          "desc": "高设计质量前端界面",
-          "trigger": "设计前端/做网页/改善界面/HTML样式",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "Create distinctive, production-grade frontend interfaces with hig",
+          "trigger": "设计前端界面/改善网页样式/HTML CSS"
         }
-      ],
-      "count": 1
+      ]
     },
     {
       "name": "🛠️ 开发与系统",
       "emoji": "🛠️",
+      "count": 4,
       "skills": [
         {
           "name": "git-essentials-1.0.0",
-          "desc": "Git版本控制",
-          "trigger": "git/commit/push/分支/冲突",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
-        },
-        {
-          "name": "openclaw-browser-auto",
-          "desc": "浏览器自动化",
-          "trigger": "浏览器自动化/填表/抓取动态网页",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
-        },
-        {
-          "name": "ontology",
-          "desc": "知识图谱",
-          "trigger": "知识图谱/实体关系/remember that X is Y",
-          "usage": "常态",
-          "status": "ok",
-          "emoji": "✅"
+          "desc": "Essential Git commands and workflows for version control, branchi",
+          "trigger": "git/commit/push/分支/冲突"
         },
         {
           "name": "weather",
-          "desc": "天气预报",
-          "trigger": "天气/多少度/温度/下雨吗",
-          "usage": "常态",
           "status": "ok",
-          "emoji": "✅"
+          "desc": "",
+          "trigger": "天气/多少度/下雨吗/温度"
+        },
+        {
+          "name": "openclaw-browser-auto",
+          "status": "ok",
+          "desc": "",
+          "trigger": "浏览器自动化/填表/抓取动态网页"
+        },
+        {
+          "name": "ontology",
+          "status": "ok",
+          "desc": "Typed knowledge graph for structured agent memory and composable ",
+          "trigger": "知识图谱/实体关系/remember X is Y"
         }
-      ],
-      "count": 4
+      ]
     },
     {
       "name": "🧠 创作与计划",
       "emoji": "🧠",
+      "count": 3,
       "skills": [
         {
           "name": "brainstorming-0.1.0",
-          "desc": "头脑风暴",
-          "trigger": "头脑风暴/创意发散/想法/方案构思",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
+          "status": "ok",
+          "desc": "You MUST use this before any creative work - creating features, b",
+          "trigger": "头脑风暴/创意发散/方案构思"
         },
         {
           "name": "writing-plans-0.1.0",
-          "desc": "写计划文档",
-          "trigger": "写计划/制定方案/规划步骤",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
+          "status": "ok",
+          "desc": "Use when you have a spec or requirements for a multi-step task, b",
+          "trigger": "写计划/制定方案/规划步骤"
         },
         {
           "name": "executing-plans-0.1.0",
-          "desc": "执行已有计划",
-          "trigger": "按计划执行/执行任务/执行步骤",
-          "usage": "按需",
-          "status": "error",
-          "emoji": "⚠️"
+          "status": "ok",
+          "desc": "Use when you have a written implementation plan to execute in a s",
+          "trigger": "按计划执行/执行任务"
         }
-      ],
-      "count": 3
-    },
-    {
-      "name": "📋 禹川工作专用",
-      "emoji": "📋",
-      "skills": [],
-      "count": 0
+      ]
     }
   ],
-  "total": 30,
-  "ok": 17
+  "total": 32,
+  "ok": 32
 }
