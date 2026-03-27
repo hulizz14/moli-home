@@ -1,289 +1,307 @@
 {
-  "total": 41,
-  "ok": 41,
-  "warn": 0,
-  "error": 0,
   "categories": [
     {
-      "name": "核心能力 · 记忆与学习",
-      "icon": "🧠",
-      "count": 5,
+      "name": "🌟 常态启用 · 核心能力",
+      "emoji": "🌟",
       "skills": [
         {
-          "name": "self-improving-agent",
-          "desc": "自我反馈学习，犯错后自动记录经验",
-          "status": "ok"
-        },
-        {
-          "name": "memory-setup",
-          "desc": "持久记忆配置，让AI记住你的习惯",
-          "status": "ok"
-        },
-        {
-          "name": "ontology",
-          "desc": "知识图谱，结构化知识管理",
-          "status": "ok"
-        },
-        {
           "name": "memory-1.0.2",
-          "status": "ok",
           "desc": "无限分层记忆系统",
-          "emoji": "🧠"
+          "trigger": "需要记忆/记住/查习惯/历史记录",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
         },
         {
           "name": "self-improving-1.1.3",
+          "desc": "自我反馈学习，犯错自动记录",
+          "trigger": "被纠正/犯错/自我复盘/经验总结",
+          "usage": "常态",
           "status": "ok",
-          "desc": "自我反馈学习，犯错后自动记录经验",
-          "emoji": "🔄"
-        }
-      ]
-    },
-    {
-      "name": "信息获取 · 搜索与摘要",
-      "icon": "🧠",
-      "count": 6,
-      "skills": [
-        {
-          "name": "summarize",
-          "desc": "网页/PDF/视频一键总结摘要",
-          "status": "ok"
+          "emoji": "✅"
         },
         {
-          "name": "web-content-fetcher",
-          "desc": "任意网页抓取，含微信公众号",
-          "status": "ok"
-        },
-        {
-          "name": "youtube-watcher",
-          "desc": "YouTube字幕提取与总结",
-          "status": "ok"
-        },
-        {
-          "name": "tavily",
-          "desc": "AI优化深度搜索",
-          "status": "ok"
+          "name": "agent-self-reflection-1.0.0",
+          "desc": "定期自我复盘",
+          "trigger": "复盘/反思工作/检查近期表现",
+          "usage": "常态",
+          "status": "error",
+          "emoji": "⚠️"
         },
         {
           "name": "find-skills",
-          "desc": "智能发现和推荐新技能",
-          "status": "ok"
+          "desc": "发现和安装新技能",
+          "trigger": "有没有能做X的skill/扩展能力",
+          "usage": "按需",
+          "status": "ok",
+          "emoji": "✅"
         },
         {
-          "name": "find-skills",
+          "name": "skill-creator-0.1.0",
+          "desc": "创建和优化技能",
+          "trigger": "创建新skill/写自动化工具",
+          "usage": "按需",
           "status": "ok",
-          "desc": "智能发现和推荐新技能",
-          "emoji": "🔍"
+          "emoji": "✅"
         }
-      ]
+      ],
+      "count": 5
     },
     {
-      "name": "数据处理 · 分析与可视化",
-      "icon": "🧠",
-      "count": 6,
+      "name": "🔍 信息获取 · 搜索与情报",
+      "emoji": "🔍",
+      "skills": [],
+      "count": 0
+    },
+    {
+      "name": "📊 数据处理 · 分析与可视化",
+      "emoji": "📊",
       "skills": [
-        {
-          "name": "duckdb-en",
-          "desc": "SQL数据库查询分析",
-          "status": "ok"
-        },
         {
           "name": "python-dataviz",
-          "desc": "Python图表生成（matplotlib/seaborn/plotly）",
-          "status": "ok"
-        },
-        {
-          "name": "stock-analysis",
-          "desc": "股票/加密货币分析，8维度评分",
-          "status": "ok"
-        },
-        {
-          "name": "stock-market-pro",
-          "desc": "股市技术分析，RSI/MACD/布林带图表",
-          "status": "ok"
-        },
-        {
-          "name": "architecture-designer",
+          "desc": "Python图表生成",
+          "trigger": "生成图表/可视化/数据报表/Python画图",
+          "usage": "常态",
           "status": "ok",
-          "desc": "系统架构设计，财务系统规划与评审",
-          "emoji": "🏗️"
-        },
-        {
-          "name": "frontend-design-3",
-          "status": "ok",
-          "desc": "高设计质量前端界面生成（HTML/CSS/React）",
-          "emoji": "🎨"
-        }
-      ]
-    },
-    {
-      "name": "文档与媒体处理",
-      "icon": "🧠",
-      "count": 7,
-      "skills": [
-        {
-          "name": "nano-pdf",
-          "desc": "用说话的方式编辑PDF文件",
-          "status": "ok"
-        },
-        {
-          "name": "markdown-converter",
-          "desc": "万能格式转Markdown",
-          "status": "ok"
-        },
-        {
-          "name": "openai-whisper",
-          "desc": "本地语音转文字（无需上传）",
-          "status": "ok"
+          "emoji": "✅"
         },
         {
           "name": "office-document-specialist-suite",
-          "desc": "Word/Excel/PPT 全能处理套件",
-          "status": "ok"
+          "desc": "Word/Excel/PPT处理",
+          "trigger": "生成Word/生成Excel/生成PPT",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
         },
         {
-          "name": "video-frames",
-          "desc": "视频帧提取与短clip制作",
-          "status": "ok"
+          "name": "architecture-designer",
+          "desc": "系统架构设计",
+          "trigger": "系统设计/架构规划/财务系统/模块划分",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
+        },
+        {
+          "name": "code-1.0.4",
+          "desc": "代码工作流（规划+实现+验证）",
+          "trigger": "写代码/编程/开发脚本/代码任务",
+          "usage": "常态",
+          "status": "error",
+          "emoji": "⚠️"
+        },
+        {
+          "name": "debug-pro-1.0.0",
+          "desc": "代码调试",
+          "trigger": "代码报错/调试/bug/修复代码",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
+        }
+      ],
+      "count": 5
+    },
+    {
+      "name": "📄 文档与媒体处理",
+      "emoji": "📄",
+      "skills": [
+        {
+          "name": "nano-pdf",
+          "desc": "自然语言编辑PDF",
+          "trigger": "编辑PDF/修改PDF/编辑合同扫描件",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
         },
         {
           "name": "video-frames-1.0.0",
+          "desc": "视频帧提取",
+          "trigger": "提取视频帧/截图视频/制作视频片段",
+          "usage": "按需",
           "status": "ok",
-          "desc": "视频帧提取与短clip制作（ffmpeg）",
-          "emoji": "🎞️"
+          "emoji": "✅"
+        },
+        {
+          "name": "ffmpeg-video-editor-1.0.0",
+          "desc": "FFmpeg视频编辑",
+          "trigger": "视频剪辑/格式转换/视频处理",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
         },
         {
           "name": "openai-whisper",
+          "desc": "本地语音转文字",
+          "trigger": "语音转文字/录音转文本/视频字幕",
+          "usage": "常态",
           "status": "ok",
-          "desc": "本地语音转文字（无需上传）",
-          "emoji": "🎤"
+          "emoji": "✅"
         }
-      ]
+      ],
+      "count": 4
     },
     {
-      "name": "办公协作 · 文档与代码",
-      "icon": "🧠",
-      "count": 11,
+      "name": "🏢 办公协作 · 飞书全家桶",
+      "emoji": "🏢",
       "skills": [
         {
-          "name": "feishu-doc",
-          "desc": "飞书文档读写",
-          "status": "ok"
+          "name": "feishu-doc-1.2.7",
+          "desc": "飞书文档/知识库读取",
+          "trigger": "读飞书文档/看wiki/查知识库",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
+        },
+        {
+          "name": "feishu-drive-1.0.0",
+          "desc": "飞书云盘管理",
+          "trigger": "飞书云盘/上传下载/管理文件",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
+        },
+        {
+          "name": "feishu-chat-history",
+          "desc": "飞书群聊记录",
+          "trigger": "看群聊/群里聊了啥/群消息",
+          "usage": "按需",
+          "status": "ok",
+          "emoji": "✅"
+        },
+        {
+          "name": "feishu-cron-reminder",
+          "desc": "飞书定时提醒",
+          "trigger": "定时提醒/定期通知/cron提醒",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
+        },
+        {
+          "name": "feishu-perm",
+          "desc": "飞书权限管理",
+          "trigger": "飞书权限/共享/访问权限/协作者",
+          "usage": "按需",
+          "status": "ok",
+          "emoji": "✅"
+        },
+        {
+          "name": "feishu-screenshot",
+          "desc": "飞书截图",
+          "trigger": "飞书截图/屏幕截图/捕捉界面",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
+        },
+        {
+          "name": "feishu-wiki",
+          "desc": "飞书知识库导航",
+          "trigger": "知识库/导航wiki/查节点",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
         },
         {
           "name": "feishu-doc-editor",
           "desc": "飞书文档编辑创建",
-          "status": "ok"
-        },
-        {
-          "name": "feishu-wiki",
-          "desc": "飞书知识库",
-          "status": "ok"
-        },
-        {
-          "name": "feishu-drive",
-          "desc": "飞书云盘",
-          "status": "ok"
-        },
-        {
-          "name": "github",
-          "desc": "GitHub项目管理（已登录hulizz14）",
-          "status": "ok"
-        },
-        {
-          "name": "humanizer",
-          "desc": "去除AI写作痕迹，让文字更自然",
-          "status": "ok"
-        },
-        {
-          "name": "feishu-chat-history",
+          "trigger": "写飞书文档/创建页面/更新知识库",
+          "usage": "常态",
           "status": "ok",
-          "desc": "飞书群聊记录读取与总结",
-          "emoji": "💬"
-        },
-        {
-          "name": "feishu-cron-reminder",
-          "status": "ok",
-          "desc": "飞书定时提醒任务创建",
-          "emoji": "⏰"
-        },
-        {
-          "name": "feishu-perm",
-          "status": "ok",
-          "desc": "飞书文档权限管理",
-          "emoji": "🔐"
-        },
-        {
-          "name": "git-essentials-1.0.0",
-          "status": "ok",
-          "desc": "Git版本控制与协作命令",
-          "emoji": "🌳"
-        },
-        {
-          "name": "feishu-wiki",
-          "status": "ok",
-          "desc": "飞书知识库导航",
-          "emoji": "📚"
+          "emoji": "✅"
         }
-      ]
+      ],
+      "count": 8
     },
     {
-      "name": "系统与集成",
-      "icon": "🧠",
-      "count": 3,
+      "name": "🎨 前端与设计",
+      "emoji": "🎨",
       "skills": [
         {
-          "name": "weather",
-          "desc": "天气预报，开箱即用无需API",
-          "status": "ok"
-        },
+          "name": "frontend-design-3",
+          "desc": "高设计质量前端界面",
+          "trigger": "设计前端/做网页/改善界面/HTML样式",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
+        }
+      ],
+      "count": 1
+    },
+    {
+      "name": "🛠️ 开发与系统",
+      "emoji": "🛠️",
+      "skills": [
         {
-          "name": "api-gateway",
-          "desc": "100+第三方API连接器",
-          "status": "ok"
+          "name": "git-essentials-1.0.0",
+          "desc": "Git版本控制",
+          "trigger": "git/commit/push/分支/冲突",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
         },
         {
           "name": "openclaw-browser-auto",
+          "desc": "浏览器自动化",
+          "trigger": "浏览器自动化/填表/抓取动态网页",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
+        },
+        {
+          "name": "ontology",
+          "desc": "知识图谱",
+          "trigger": "知识图谱/实体关系/remember that X is Y",
+          "usage": "常态",
           "status": "ok",
-          "desc": "OpenClaw浏览器自动化配置",
-          "emoji": "🌐"
+          "emoji": "✅"
+        },
+        {
+          "name": "weather",
+          "desc": "天气预报",
+          "trigger": "天气/多少度/温度/下雨吗",
+          "usage": "常态",
+          "status": "ok",
+          "emoji": "✅"
         }
-      ]
+      ],
+      "count": 4
     },
     {
-      "name": "安全与元技能",
-      "icon": "🧠",
-      "count": 3,
+      "name": "🧠 创作与计划",
+      "emoji": "🧠",
       "skills": [
         {
-          "name": "skill-vetter",
-          "desc": "Skill安全审查，安装前检查风险",
-          "status": "ok"
+          "name": "brainstorming-0.1.0",
+          "desc": "头脑风暴",
+          "trigger": "头脑风暴/创意发散/想法/方案构思",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
         },
         {
-          "name": "skillhub-preference",
-          "desc": "技能源优先级策略",
-          "status": "ok"
+          "name": "writing-plans-0.1.0",
+          "desc": "写计划文档",
+          "trigger": "写计划/制定方案/规划步骤",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
         },
         {
-          "name": "autoglm-browser-agent",
-          "desc": "智能浏览器自动化",
-          "status": "ok"
+          "name": "executing-plans-0.1.0",
+          "desc": "执行已有计划",
+          "trigger": "按计划执行/执行任务/执行步骤",
+          "usage": "按需",
+          "status": "error",
+          "emoji": "⚠️"
         }
-      ]
+      ],
+      "count": 3
     },
     {
-      "name": "🌸 茉莉专属",
-      "icon": "🧠",
-      "count": 0,
-      "skills": []
+      "name": "📋 禹川工作专用",
+      "emoji": "📋",
+      "skills": [],
+      "count": 0
     }
   ],
-  "learning_queue": [
-    "openclaw 安全配置深化",
-    "context-management 效率优化",
-    "legal-knowledge 法律知识",
-    "data-visualization 审美",
-    "creative-writing 创意"
-  ],
-  "generated_at": "2026-03-27 01:01"
+  "total": 30,
+  "ok": 17
 }
