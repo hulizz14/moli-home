@@ -32,6 +32,16 @@
       ]
     },
     {
+      "icon": "📋",
+      "title": "工作汇报自动化",
+      "items": [
+        "部门汇报（施萍/其他）→ 微信截图/语音 → AI四要素解析",
+        "四要素：完成状态 / 未完成原因 / 补救措施 / 二次考核时间",
+        "确认后自动更新 tasks.json → GitHub Pages → 看板+早晚报联动",
+        "资金付款提前60天首次提醒，每周重复直到确认"
+      ]
+    },
+    {
       "icon": "💰",
       "title": "财务管理",
       "items": [
@@ -65,7 +75,8 @@
       "items": [
         "每周进修系统（每天03:00自动学习安全/效率/行业/审美/财务）",
         "犯错后自动记录教训，永不重蹈覆辙",
-        "记忆持久化，跨session保持连续性"
+        "记忆持久化，跨session保持连续性",
+        "今日新增：汇报解析 SOP · 施萍用语知识库"
       ]
     }
   ],
@@ -80,10 +91,12 @@
     "主动汇报：有进展就汇报，不用催",
     "数据驱动：所有结论都有数据支撑",
     "精准执行：明确的任务直接做完再汇报",
-    "诚实透明：不确定的事会说不知道，不会瞎编"
+    "诚实透明：不确定的事会说不知道，不会瞎编",
+    "从业务视角分析，不从技术架构出发"
   ],
   "urls": {
     "skill_tree": "https://hulizz14.github.io/moli-home/",
-    "dashboard": "https://hulizz14.github.io/yuchuan-dashboard/"
+    "dashboard": "https://hulizz14.github.io/yuchuan-dashboard/",
+    "report_automation": "https://hulizz14.github.io/moli-home/docs/汇报自动化体系_v1.0.html"
   }
 }
