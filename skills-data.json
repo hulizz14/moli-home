@@ -1,461 +1,244 @@
 {
+  "total": 36,
+  "ok": 31,
+  "warn": 3,
+  "error": 2,
   "categories": [
     {
-      "name": "🌟 常态核心能力",
-      "emoji": "🌟",
-      "count": 6,
+      "name": "核心能力 · 记忆与学习",
+      "icon": "🧠",
+      "count": 4,
       "skills": [
         {
-          "name": "memory-1.0.2",
-          "status": "ok",
-          "desc": "三层记忆系统（HOT/WARM/COLD），自动整理每日会话，重要信息长期留存，新session自动加载上下文",
-          "trigger": "需要记忆/记住/查习惯/历史记录"
+          "name": "self-improving-agent",
+          "desc": "自我反馈学习，犯错后自动记录经验",
+          "status": "ok"
         },
         {
-          "name": "self-improving-1.1.3",
-          "status": "ok",
-          "desc": "犯错后自动记录教训，3次重复自动沉淀为Pattern，每次工作后主动复盘",
-          "trigger": "被纠正/犯错/自我复盘/经验总结"
+          "name": "memory-setup",
+          "desc": "持久记忆配置，让AI记住你的习惯",
+          "status": "ok"
         },
         {
-          "name": "agent-self-reflection-1.0.0",
-          "status": "ok",
-          "desc": "定期自动复盘近期工作表现，发现薄弱环节，生成改进建议",
-          "trigger": "复盘/反思/检查近期表现"
-        },
-        {
-          "name": "proactive-agent-lite",
-          "status": "ok",
-          "desc": "主动代理：记忆架构+反向提示+自愈模式，从被动执行变主动伙伴",
-          "trigger": "主动思考/更积极主动/提前预判"
-        },
-        {
-          "name": "find-skills",
-          "status": "ok",
-          "desc": "在clawhub上搜索和安装新技能，帮你发现并配置新工具",
-          "trigger": "有没有skill能做X/扩展能力"
-        },
-        {
-          "name": "skill-creator",
-          "status": "ok",
-          "desc": "从零创建新的自动化技能，将重复工作封装为可复用工具",
-          "trigger": "创建新skill/author a skill"
-        }
-      ]
-    },
-    {
-      "name": "🤖 AI代理与自动化",
-      "emoji": "🤖",
-      "count": 14,
-      "skills": [
-        {
-          "name": "capability-evolver-pro",
-          "status": "ok",
-          "desc": "分析运行时日志检测错误模式、回归和低效，自动生成结构化改进方案",
-          "trigger": "分析运行日志/找性能问题/自动改进建议"
-        },
-        {
-          "name": "automation-workflows-0.1.0",
-          "status": "ok",
-          "desc": "工作流自动化设计：Zapier/Make/n8n，识别重复任务并构建自动化流程",
-          "trigger": "自动化/减少重复工作/workflow"
-        },
-        {
-          "name": "desktop-control",
-          "status": "ok",
-          "desc": "像素级桌面自动化：鼠标移动/点击/拖拽、键盘输入、截图、窗口管理",
-          "trigger": "控制桌面/自动点击/鼠标操作"
-        },
-        {
-          "name": "macos-desktop-control",
-          "status": "ok",
-          "desc": "Mac专用桌面控制：cliclick精准鼠标/键盘事件、screencapture截图",
-          "trigger": "Mac桌面控制/精准点击"
-        },
-        {
-          "name": "autoglm-browser-agent",
-          "status": "ok",
-          "desc": "浏览器自动化Agent，自动填表、点击、抓取动态网页内容",
-          "trigger": "浏览器自动化/自动填表"
-        },
-        {
-          "name": "autoglm-deepresearch",
-          "status": "ok",
-          "desc": "深度研究Agent，多轮搜索+整理，输出结构化研究报告",
-          "trigger": "深度研究/多轮搜索"
-        },
-        {
-          "name": "autoglm-generate-image",
-          "status": "ok",
-          "desc": "AI图片生成，支持多种风格和尺寸",
-          "trigger": "生成图片/AI画图"
-        },
-        {
-          "name": "autoglm-open-link",
-          "status": "ok",
-          "desc": "智能打开链接，处理重定向和复杂页面",
-          "trigger": "打开链接/访问网址"
-        },
-        {
-          "name": "autoglm-search-image",
-          "status": "ok",
-          "desc": "以图搜图：上传图片找到相似内容",
-          "trigger": "搜图/以图搜图"
-        },
-        {
-          "name": "autoglm-websearch",
-          "status": "ok",
-          "desc": "网页搜索，快速获取网络信息",
-          "trigger": "搜索/网上查"
-        },
-        {
-          "name": "openclaw-browser-auto",
-          "status": "ok",
-          "desc": "通过CDP协议控制Chrome浏览器，执行复杂自动化任务",
-          "trigger": "CDP浏览器/自动化Chrome"
-        },
-        {
-          "name": "opencode-controller-1.0.0",
-          "status": "ok",
-          "desc": "控制OpenCode/Codex执行编码任务",
-          "trigger": "Codex控制/AI写代码"
-        },
-        {
-          "name": "email-management",
-          "status": "ok",
-          "desc": "邮件管理：IMAP读取/分类/起草回复/跟踪待办，支持QQ邮箱",
-          "trigger": "邮件管理/读邮件/发邮件"
-        },
-        {
-          "name": "test-runner-1.0.0",
-          "status": "ok",
-          "desc": "运行自动化测试，验证代码改动是否符合预期",
-          "trigger": "运行测试/测试验证"
-        }
-      ]
-    },
-    {
-      "name": "🔍 信息获取",
-      "emoji": "🔍",
-      "count": 7,
-      "skills": [
-        {
-          "name": "tavily",
-          "status": "ok",
-          "desc": "AI优化的深度网络搜索，抓取房地产政策、康养REITs等行业情报",
-          "trigger": "搜索/查一下/行业情报/政策查询"
-        },
-        {
-          "name": "youtube-watcher",
-          "status": "ok",
-          "desc": "提取YouTube视频字幕并总结，快速了解视频核心内容",
-          "trigger": "YouTube字幕/视频内容"
-        },
-        {
-          "name": "summarize",
-          "status": "ok",
-          "desc": "一键总结网页、PDF、播客、会议的要点，提取关键信息",
-          "trigger": "总结/摘要/概括/提炼要点"
-        },
-        {
-          "name": "aminer-open-academic-1.0.5",
-          "status": "ok",
-          "desc": "学术搜索：论文检索、作者信息、学术图表分析",
-          "trigger": "学术搜索/论文检索"
-        },
-        {
-          "name": "a-stock-analysis-1.0.0",
-          "status": "ok",
-          "desc": "A股分析：行情数据、技术指标、个股基本面分析",
-          "trigger": "A股/股票分析"
-        },
-        {
-          "name": "market-research-1.0.0",
-          "status": "ok",
-          "desc": "市场调研：行业分析、竞品研究、市场规模估算",
-          "trigger": "市场调研/行业分析"
-        },
-        {
-          "name": "research-paper-writer-0.1.0",
-          "status": "ok",
-          "desc": "研究论文写作：结构设计、文献整理、学术写作规范",
-          "trigger": "写论文/学术写作"
-        }
-      ]
-    },
-    {
-      "name": "📊 数据处理",
-      "emoji": "📊",
-      "count": 5,
-      "skills": [
-        {
-          "name": "python-dataviz",
-          "status": "ok",
-          "desc": "用Python生成专业图表（折线/柱状/饼图/热力图等），支持导出PNG/SVG",
-          "trigger": "生成图表/可视化/数据报表/Python画图"
-        },
-        {
-          "name": "office-document-specialist-suite",
-          "status": "ok",
-          "desc": "全自动生成Word方案、Excel报表、PPT述职文档，支持模板填充",
-          "trigger": "生成Word/生成Excel/生成PPT"
-        },
-        {
-          "name": "architecture-designer",
-          "status": "ok",
-          "desc": "设计复杂系统架构，规划财务系统、看板等大型项目的模块划分",
-          "trigger": "系统设计/架构规划/财务系统"
-        },
-        {
-          "name": "code-1.0.4",
-          "status": "ok",
-          "desc": "完整代码工作流：需求分析→编写→测试→调试一条龙",
-          "trigger": "写代码/编程/开发脚本"
-        },
-        {
-          "name": "debug-pro-1.0.0",
-          "status": "ok",
-          "desc": "智能定位代码报错原因，给出修复方案并验证",
-          "trigger": "代码报错/bug调试/修复代码"
-        }
-      ]
-    },
-    {
-      "name": "📄 文档与媒体",
-      "emoji": "📄",
-      "count": 6,
-      "skills": [
-        {
-          "name": "nano-pdf",
-          "status": "ok",
-          "desc": "用自然语言指令编辑PDF内容，修改文字、换图、调整布局",
-          "trigger": "编辑PDF/修改PDF内容"
-        },
-        {
-          "name": "openai-whisper",
-          "status": "ok",
-          "desc": "本地语音转文字（不离线上传），支持录音、视频字幕快速提取",
-          "trigger": "语音转文字/录音转文本/字幕"
-        },
-        {
-          "name": "video-frames",
-          "status": "ok",
-          "desc": "从视频中提取指定帧，或截取片段制作短clip",
-          "trigger": "提取视频帧/截图视频/制作clip"
-        },
-        {
-          "name": "ffmpeg-video-editor-1.0.0",
-          "status": "ok",
-          "desc": "用自然语言生成FFmpeg命令，完成视频剪辑、格式转换、压缩等",
-          "trigger": "视频剪辑/格式转换"
-        },
-        {
-          "name": "blog-writer-0.1.0",
-          "status": "ok",
-          "desc": "博客文章写作：选题策划、结构设计、SEO优化",
-          "trigger": "写博客/博客文章"
-        },
-        {
-          "name": "copywriting-0.1.0",
-          "status": "ok",
-          "desc": "营销文案撰写：广告语、产品介绍、推广文案",
-          "trigger": "文案撰写/营销文案"
-        }
-      ]
-    },
-    {
-      "name": "🏢 飞书全家桶",
-      "emoji": "🏢",
-      "count": 8,
-      "skills": [
-        {
-          "name": "feishu-doc",
-          "status": "ok",
-          "desc": "读取飞书文档、知识库、表格内容，获取最新数据",
-          "trigger": "读飞书文档/看wiki/写飞书文档"
-        },
-        {
-          "name": "feishu-wiki",
-          "status": "ok",
-          "desc": "在飞书知识库中导航，查找相关文档和节点",
-          "trigger": "知识库导航/wiki节点"
-        },
-        {
-          "name": "feishu-drive",
-          "status": "ok",
-          "desc": "管理飞书云盘：上传文件、下载备份、整理目录结构",
-          "trigger": "飞书云盘/上传下载文件"
-        },
-        {
-          "name": "feishu-chat-history",
-          "status": "ok",
-          "desc": "读取飞书群聊记录，提取关键讨论内容和决策结论",
-          "trigger": "看群聊记录/群里聊了啥"
-        },
-        {
-          "name": "feishu-cron-reminder",
-          "status": "ok",
-          "desc": "在飞书定时推送提醒，支持每日、每周、每小时等多种周期",
-          "trigger": "定时提醒/cron/定期飞书通知"
-        },
-        {
-          "name": "feishu-perm",
-          "status": "ok",
-          "desc": "管理飞书文档的访问权限，设置谁可以看/编辑/评论",
-          "trigger": "飞书权限/共享文档/协作者"
-        },
-        {
-          "name": "feishu-screenshot",
-          "status": "ok",
-          "desc": "截取飞书界面图片，保存为本地文件",
-          "trigger": "飞书截图/界面捕捉"
-        },
-        {
-          "name": "feishu-send-file",
-          "status": "ok",
-          "desc": "向飞书发送文件，支持指定用户或群组",
-          "trigger": "发文件到飞书"
-        }
-      ]
-    },
-    {
-      "name": "🎨 内容与创意",
-      "emoji": "🎨",
-      "count": 6,
-      "skills": [
-        {
-          "name": "frontend-design-3",
-          "status": "ok",
-          "desc": "生成高设计质量的前端界面，提供HTML/CSS/React组件代码",
-          "trigger": "设计前端界面/改善网页样式/HTML CSS"
-        },
-        {
-          "name": "ui-ux-pro-max-0.1.0",
-          "status": "ok",
-          "desc": "UI/UX设计评审和改进建议，覆盖可用性、可访问性、设计规范",
-          "trigger": "UI设计/UX评审/可用性"
-        },
-        {
-          "name": "brainstorming-0.1.0",
-          "status": "ok",
-          "desc": "发散思维，生成大量创意想法，找到独特的解决方案",
-          "trigger": "头脑风暴/创意发散/方案构思"
-        },
-        {
-          "name": "content-strategy-0.1.0",
-          "status": "ok",
-          "desc": "内容策略规划：选题、渠道适配、分发节奏",
-          "trigger": "内容策略/选题规划"
-        },
-        {
-          "name": "social-content-generator-0.1.0",
-          "status": "ok",
-          "desc": "社交媒体内容生成：小红书、微博、抖音等平台适配",
-          "trigger": "社交内容/小红书/抖音"
-        },
-        {
-          "name": "social-media-scheduler-1.0.0",
-          "status": "ok",
-          "desc": "社交媒体排程规划，制定发布节奏和内容日历",
-          "trigger": "排程/内容日历"
-        }
-      ]
-    },
-    {
-      "name": "🛠️ 开发与系统",
-      "emoji": "🛠️",
-      "count": 7,
-      "skills": [
-        {
-          "name": "git-essentials-1.0.0",
-          "status": "ok",
-          "desc": "Git版本控制：提交记录、分支管理、解决冲突、推送拉取",
-          "trigger": "git/commit/push/分支/冲突"
-        },
-        {
-          "name": "weather",
-          "status": "ok",
-          "desc": "查询任意城市当前天气和未来7天预报，无需API Key",
-          "trigger": "天气/多少度/下雨吗/温度"
+          "name": "proactive-agent",
+          "desc": "主动Agent，预判需求定时巡检",
+          "status": "ok"
         },
         {
           "name": "ontology",
-          "status": "ok",
-          "desc": "构建知识图谱，管理实体（人/公司/项目）及其关系，辅助推理",
-          "trigger": "知识图谱/实体关系/remember X is Y"
-        },
-        {
-          "name": "tmux-1.0.0",
-          "status": "ok",
-          "desc": "Tmux终端会话管理，多窗口、分屏、会话保持",
-          "trigger": "tmux/终端管理/分屏"
-        },
-        {
-          "name": "writing-plans-0.1.0",
-          "status": "ok",
-          "desc": "将模糊想法拆解为可执行的具体步骤，形成可落地的计划文档",
-          "trigger": "写计划/制定方案/规划步骤"
-        },
-        {
-          "name": "executing-plans-0.1.0",
-          "status": "ok",
-          "desc": "按照已有计划自动执行任务，逐步完成目标",
-          "trigger": "按计划执行/执行任务"
-        },
-        {
-          "name": "interview-designer-1.0.0",
-          "status": "ok",
-          "desc": "面试问题设计：岗位分析、问题库、评估标准",
-          "trigger": "面试设计/面试问题"
+          "desc": "知识图谱，结构化知识管理",
+          "status": "ok"
         }
       ]
     },
     {
-      "name": "🔒 安全与效率",
-      "emoji": "🔒",
+      "name": "信息获取 · 搜索与摘要",
+      "icon": "🧠",
+      "count": 5,
+      "skills": [
+        {
+          "name": "summarize",
+          "desc": "网页/PDF/视频一键总结摘要",
+          "status": "ok"
+        },
+        {
+          "name": "web-content-fetcher",
+          "desc": "任意网页抓取，含微信公众号",
+          "status": "ok"
+        },
+        {
+          "name": "youtube-watcher",
+          "desc": "YouTube字幕提取与总结",
+          "status": "ok"
+        },
+        {
+          "name": "tavily",
+          "desc": "AI优化深度搜索",
+          "status": "ok"
+        },
+        {
+          "name": "find-skills",
+          "desc": "智能发现和推荐新技能",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "数据处理 · 分析与可视化",
+      "icon": "🧠",
+      "count": 4,
+      "skills": [
+        {
+          "name": "duckdb-en",
+          "desc": "SQL数据库查询分析",
+          "status": "ok"
+        },
+        {
+          "name": "python-dataviz",
+          "desc": "Python图表生成（matplotlib/seaborn/plotly）",
+          "status": "ok"
+        },
+        {
+          "name": "stock-analysis",
+          "desc": "股票/加密货币分析，8维度评分",
+          "status": "ok"
+        },
+        {
+          "name": "stock-market-pro",
+          "desc": "股市技术分析，RSI/MACD/布林带图表",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "文档与媒体处理",
+      "icon": "🧠",
+      "count": 5,
+      "skills": [
+        {
+          "name": "nano-pdf",
+          "desc": "用说话的方式编辑PDF文件",
+          "status": "ok"
+        },
+        {
+          "name": "markdown-converter",
+          "desc": "万能格式转Markdown",
+          "status": "ok"
+        },
+        {
+          "name": "openai-whisper",
+          "desc": "本地语音转文字（无需上传）",
+          "status": "ok"
+        },
+        {
+          "name": "office-document-specialist-suite",
+          "desc": "Word/Excel/PPT 全能处理套件",
+          "status": "ok"
+        },
+        {
+          "name": "video-frames",
+          "desc": "视频帧提取与短clip制作",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "办公协作 · 文档与代码",
+      "icon": "🧠",
       "count": 6,
       "skills": [
         {
-          "name": "security-auditor-1.0.0",
-          "status": "ok",
-          "desc": "安全审计：检查配置漏洞、暴露面、数据保护建议",
-          "trigger": "安全审计/漏洞检查"
+          "name": "feishu-doc",
+          "desc": "飞书文档读写",
+          "status": "ok"
         },
         {
-          "name": "clawdefender-1",
-          "status": "ok",
-          "desc": "OpenClaw安全防护：检测恶意指令、越权行为、数据泄露风险",
-          "trigger": "安全防护/恶意检测"
+          "name": "feishu-doc-editor",
+          "desc": "飞书文档编辑创建",
+          "status": "ok"
         },
+        {
+          "name": "feishu-wiki",
+          "desc": "飞书知识库",
+          "status": "ok"
+        },
+        {
+          "name": "feishu-drive",
+          "desc": "飞书云盘",
+          "status": "ok"
+        },
+        {
+          "name": "github",
+          "desc": "GitHub项目管理（已登录hulizz14）",
+          "status": "ok"
+        },
+        {
+          "name": "humanizer",
+          "desc": "去除AI写作痕迹，让文字更自然",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "name": "系统与集成",
+      "icon": "🧠",
+      "count": 5,
+      "skills": [
+        {
+          "name": "weather",
+          "desc": "天气预报，开箱即用无需API",
+          "status": "ok"
+        },
+        {
+          "name": "gog",
+          "desc": "Google Workspace（Gmail/日历/文档）",
+          "status": "ok"
+        },
+        {
+          "name": "api-gateway",
+          "desc": "100+第三方API连接器",
+          "status": "warn"
+        },
+        {
+          "name": "notion",
+          "desc": "Notion笔记管理",
+          "status": "warn"
+        },
+        {
+          "name": "obsidian",
+          "desc": "Obsidian本地知识库",
+          "status": "warn"
+        }
+      ]
+    },
+    {
+      "name": "安全与元技能",
+      "icon": "🧠",
+      "count": 4,
+      "skills": [
         {
           "name": "skill-vetter",
-          "status": "ok",
-          "desc": "Skill安全审核：安装前检查代码安全、依赖风险",
-          "trigger": "审核skill/安全检查"
+          "desc": "Skill安全审查，安装前检查风险",
+          "status": "ok"
         },
         {
-          "name": "1password-1.0.1",
-          "status": "ok",
-          "desc": "1Password密码管理：密码查找、自动填充、安全笔记",
-          "trigger": "密码管理/1Password"
+          "name": "skillhub-preference",
+          "desc": "技能源优先级策略",
+          "status": "ok"
         },
         {
-          "name": "session-logs-1.0.0",
-          "status": "ok",
-          "desc": "会话日志管理：记录、导出、回溯历史会话",
-          "trigger": "会话日志/历史记录"
+          "name": "autoclaw-browser",
+          "desc": "OpenClaw内置浏览器控制",
+          "status": "error"
         },
         {
-          "name": "memory-1.0.2",
-          "status": "ok",
-          "desc": "三层记忆系统（HOT/WARM/COLD），自动整理每日会话，重要信息长期留存",
-          "trigger": "长期记忆/记忆管理"
+          "name": "autoglm-browser-agent",
+          "desc": "智能浏览器自动化",
+          "status": "error"
+        }
+      ]
+    },
+    {
+      "name": "🌸 茉莉专属",
+      "icon": "🧠",
+      "count": 3,
+      "skills": [
+        {
+          "name": "yuchuan-dashboard",
+          "desc": "禹川集团综合看板自动更新",
+          "status": "ok"
+        },
+        {
+          "name": "daily-report",
+          "desc": "每日早报自动生成发送",
+          "status": "ok"
+        },
+        {
+          "name": "memory-system",
+          "desc": "记忆持久化与可视化",
+          "status": "ok"
         }
       ]
     }
-  ],
-  "total": 65,
-  "ok": 65,
-  "warn": 0,
-  "error": 0
+  ]
 }
