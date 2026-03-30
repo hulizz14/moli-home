@@ -250,6 +250,11 @@
     "status": "ok"
   },
   {
+    "name": "skills",
+    "description": "",
+    "status": "ok"
+  },
+  {
     "name": "social-content-generator-0.1.0",
     "description": "You are an expert social media strategist with direct access to a scheduling platform that publishes",
     "status": "ok"
@@ -317,6 +322,11 @@
   {
     "name": "proactive-agent-lite",
     "description": "Transform your AI agents from passive task-followers into proactive partners that anticipate needs a",
+    "status": "ok"
+  },
+  {
+    "name": "self-improvement",
+    "description": "",
     "status": "ok"
   }
 ]
